@@ -1,0 +1,2104 @@
+<script>
+var level = 0 , moves = 0 , highscore1 = 1000000, highscore3 = 1000000, highscore4 = 1000000, highscore5 = 1000000, highscore2 = 1000000, lvl, time = 60, times=0, difficulty=0
+function one() //loads all cars for level one and configures settings back to normal
+{
+lvl=1;
+  for (var c=0 ; c<7 ; c++)
+  {
+  document.getElementById("0:" + c).style.backgroundColor = "white";
+  document.getElementById("1:" + c).style.backgroundColor = "white";
+  document.getElementById("2:" + c).style.backgroundColor = "white";
+  document.getElementById("3:" + c).style.backgroundColor = "white";
+  document.getElementById("4:" + c).style.backgroundColor = "white";
+  document.getElementById("5:" + c).style.backgroundColor = "white";
+  document.getElementById("6:" + c).style.backgroundColor = "white";
+  }; 
+document.getElementById("2:5").style.backgroundColor = "yellow";
+document.getElementById("3:5").style.backgroundColor = "yellow";
+document.getElementById("2:0").style.backgroundColor = "red";
+document.getElementById("0:3").style.backgroundColor = "black";
+document.getElementById("1:3").style.backgroundColor = "black";
+document.getElementById("2:3").style.backgroundColor = "black";
+document.getElementById("5:3").style.backgroundColor = "lime";
+document.getElementById("5:4").style.backgroundColor = "lime";
+document.getElementById("5:5").style.backgroundColor = "lime";
+moves= 1
+document.getElementById("moves").innerHTML = "Moves: 0"
+  for (var c=0 ; c<7 ; c++)
+  {
+  document.getElementById("0:" + c).disabled = false;
+  document.getElementById("1:" + c).disabled = false;
+  document.getElementById("2:" + c).disabled = false;
+  document.getElementById("3:" + c).disabled = false;
+  document.getElementById("4:" + c).disabled = false;
+  document.getElementById("5:" + c).disabled = false;
+ document.getElementById("6:" + c).disabled = false;
+  };
+   document.getElementById("message").innerHTML = "";
+   if(highscore1==1000000)
+   {document.getElementById("hs").innerHTML = "Highscore: 0"}
+   else { document.getElementById("hs").innerHTML = "Highscore: " +highscore1}
+        document.getElementById("6th").style.display = "none";
+        document.getElementById("timer").style.display = "none";
+        document.getElementById("five").style.display = "none";
+        document.getElementById("2:0").value = ""; 
+}
+function two() //loads all cars for level 2 and sets to level to work properly after changing levels
+{
+lvl=2;
+
+  for (var c=0 ; c<7 ; c++)
+  {
+  document.getElementById("0:" + c).style.backgroundColor = "white";
+  document.getElementById("1:" + c).style.backgroundColor = "white";
+  document.getElementById("2:" + c).style.backgroundColor = "white";
+  document.getElementById("3:" + c).style.backgroundColor = "white";
+  document.getElementById("4:" + c).style.backgroundColor = "white";
+  document.getElementById("5:" + c).style.backgroundColor = "white";
+  document.getElementById("6:" + c).style.backgroundColor = "white";
+  };
+  //cars for the level
+  document.getElementById("2:0").style.backgroundColor = "red";
+  document.getElementById("0:2").style.backgroundColor = "orange";
+  document.getElementById("1:2").style.backgroundColor = "orange";
+  document.getElementById("2:2").style.backgroundColor = "orange";
+  document.getElementById("4:2").style.backgroundColor = "purple";
+  document.getElementById("4:1").style.backgroundColor = "purple";
+  document.getElementById("4:3").style.backgroundColor = "purple";
+  document.getElementById("3:1").style.backgroundColor = "yellow";
+  document.getElementById("3:2").style.backgroundColor = "yellow";
+  document.getElementById("3:4").style.backgroundColor = "black";
+  document.getElementById("4:4").style.backgroundColor = "black";
+  document.getElementById("5:4").style.backgroundColor = "black";
+  document.getElementById("0:4").style.backgroundColor = "pink";
+  document.getElementById("0:5").style.backgroundColor = "pink";
+  //cars
+  moves= 1
+document.getElementById("moves").innerHTML = "Moves: 0"
+  for (var c=0 ; c<7 ; c++)
+  {
+  document.getElementById("0:" + c).disabled = false;
+  document.getElementById("1:" + c).disabled = false;
+  document.getElementById("2:" + c).disabled = false;
+  document.getElementById("3:" + c).disabled = false;
+  document.getElementById("4:" + c).disabled = false;
+  document.getElementById("5:" + c).disabled = false;
+  document.getElementById("6:" + c).disabled = false;
+  };
+     document.getElementById("message").innerHTML = "";
+   if(highscore2==1000000)
+   {document.getElementById("hs").innerHTML = "Highscore: 0"}
+   else { document.getElementById("hs").innerHTML = "Highscore: " +highscore2}
+        document.getElementById("6th").style.display = "none";
+        document.getElementById("five").style.display = "none";
+        document.getElementById("timer").style.display = "none";
+        document.getElementById("2:0").value = "";
+        
+
+}
+function three() //loads all cars for level 3 and the concrete tiles
+{
+lvl=3;
+  for (var c=0 ; c<7 ; c++)
+  {
+  document.getElementById("0:" + c).style.backgroundColor = "white";
+  document.getElementById("1:" + c).style.backgroundColor = "white";
+  document.getElementById("2:" + c).style.backgroundColor = "white";
+  document.getElementById("3:" + c).style.backgroundColor = "white";
+  document.getElementById("4:" + c).style.backgroundColor = "white";
+  document.getElementById("5:" + c).style.backgroundColor = "white";
+  document.getElementById("6:" + c).style.backgroundColor = "white";
+  };
+  //cars
+  document.getElementById("2:0").style.backgroundColor = "red";
+  document.getElementById("3:3").style.backgroundColor = "gray";
+  document.getElementById("4:4").style.backgroundColor = "gray";
+  document.getElementById("0:2").style.backgroundColor = "gray";
+  document.getElementById("4:1").style.backgroundColor = "gray";
+  document.getElementById("1:2").style.backgroundColor = "orange";
+  document.getElementById("2:2").style.backgroundColor = "orange";
+  document.getElementById("3:2").style.backgroundColor = "orange";
+  document.getElementById("5:2").style.backgroundColor = "pink";
+  document.getElementById("5:1").style.backgroundColor = "pink";
+  document.getElementById("5:3").style.backgroundColor = "pink";
+  document.getElementById("4:5").style.backgroundColor = "yellow";
+  document.getElementById("5:5").style.backgroundColor = "yellow";
+  document.getElementById("1:4").style.backgroundColor = "black";
+  document.getElementById("1:3").style.backgroundColor = "black";
+  document.getElementById("1:5").style.backgroundColor = "black";
+  document.getElementById("5:0").style.backgroundColor = "lime";
+  document.getElementById("4:0").style.backgroundColor = "lime";
+  document.getElementById("3:0").style.backgroundColor = "lime";
+  document.getElementById("2:1").style.backgroundColor = "purple";
+  document.getElementById("1:1").style.backgroundColor = "purple";
+  
+  moves= 1
+document.getElementById("moves").innerHTML = "Moves: 0"
+  for (var c=0 ; c<7 ; c++)
+  {
+  document.getElementById("0:" + c).disabled = false;
+  document.getElementById("1:" + c).disabled = false;
+  document.getElementById("2:" + c).disabled = false;
+  document.getElementById("3:" + c).disabled = false;
+  document.getElementById("4:" + c).disabled = false;
+  document.getElementById("5:" + c).disabled = false;
+  document.getElementById("6:" + c).disabled = false;
+  };
+     document.getElementById("message").innerHTML = "";
+   if(highscore3==1000000)
+   {document.getElementById("hs").innerHTML = "Highscore: 0"}
+   else { document.getElementById("hs").innerHTML = "Highscore: " +highscore3}
+        document.getElementById("6th").style.display = "none";
+        document.getElementById("five").style.display = "none";
+        document.getElementById("timer").style.display = "none";
+        document.getElementById("2:0").value = "";
+        
+}
+function four() //loads all cars for level 4 
+{
+lvl=4;
+  for (var c=0 ; c<7 ; c++)
+  {
+  document.getElementById("0:" + c).style.backgroundColor = "white";
+  document.getElementById("1:" + c).style.backgroundColor = "white";
+  document.getElementById("2:" + c).style.backgroundColor = "white";
+  document.getElementById("3:" + c).style.backgroundColor = "white";
+  document.getElementById("4:" + c).style.backgroundColor = "white";
+  document.getElementById("5:" + c).style.backgroundColor = "white";
+  document.getElementById("6:" + c).style.backgroundColor = "white";
+  };
+  //cars
+  document.getElementById("2:2").style.backgroundColor = "red";
+    document.getElementById("2:3").style.backgroundColor = "red";
+    document.getElementById("2:1").style.backgroundColor = "pink";
+    document.getElementById("3:1").style.backgroundColor = "pink";
+    document.getElementById("1:1").style.backgroundColor = "pink";
+    document.getElementById("1:2").style.backgroundColor = "orange";
+    document.getElementById("1:3").style.backgroundColor = "orange";
+    document.getElementById("5:2").style.backgroundColor = "aqua";
+    document.getElementById("4:2").style.backgroundColor = "aqua";
+    document.getElementById("3:2").style.backgroundColor = "aqua";
+    document.getElementById("5:3").style.backgroundColor = "lime";
+    document.getElementById("4:3").style.backgroundColor = "lime";
+    document.getElementById("4:5").style.backgroundColor = "black";
+    document.getElementById("4:4").style.backgroundColor = "black";
+    document.getElementById("0:5").style.backgroundColor = "yellow";
+    document.getElementById("1:5").style.backgroundColor = "yellow";
+    document.getElementById("2:5").style.backgroundColor = "yellow";
+    document.getElementById("1:4").style.backgroundColor = "brown";
+    document.getElementById("0:4").style.backgroundColor = "brown";
+    document.getElementById("2:4").style.backgroundColor = "magenta";
+    document.getElementById("3:4").style.backgroundColor = "magenta";
+    
+  //cars
+  moves= 1
+document.getElementById("moves").innerHTML = "Moves: 0"
+  for (var c=0 ; c<7 ; c++)
+  {
+  document.getElementById("0:" + c).disabled = false;
+  document.getElementById("1:" + c).disabled = false;
+  document.getElementById("2:" + c).disabled = false;
+  document.getElementById("3:" + c).disabled = false;
+  document.getElementById("4:" + c).disabled = false;
+  document.getElementById("5:" + c).disabled = false;
+  document.getElementById("6:" + c).disabled = false;
+  };
+     document.getElementById("message").innerHTML = "";
+   if(highscore4==1000000)
+   {document.getElementById("hs").innerHTML = "Highscore: 0"}
+   else { document.getElementById("hs").innerHTML = "Highscore: " +highscore4}
+     document.getElementById("6th").style.display = "none";
+     document.getElementById("five").style.display = "none";
+     document.getElementById("timer").style.display = "none";
+     document.getElementById("2:0").value = "";
+}
+function five() //loads all cars for level 5
+{
+lvl=5;
+document.getElementById("timer").value= "Complete level in <span id='time'>60</span> seconds to win!"
+time=41
+//setting up the timer to add difficulty to level 5
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        seconds = parseInt(timer % 41);
+
+       
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent =+ seconds +" seconds to win!";
+
+        if (--timer < 0) {
+        times=0
+        timer=41
+        time=41
+        document.getElementById("timer").value= "Complete level in <span id='time'>60</span> seconds to win!"
+           document.getElementById("time").value=startTimer(time, display);
+           display.textContent =+ seconds +" seconds to win";
+                        if (lvl==5)
+{five() }; //when the timer runs out the level resets
+        }
+    }, 1000);
+}
+ if (times==0) 
+    {
+    display = document.getElementById("time");
+    startTimer(time, display)
+    times++
+    };
+  for (var c=0 ; c<7 ; c++)
+  {
+  document.getElementById("0:" + c).style.backgroundColor = "white";
+  document.getElementById("1:" + c).style.backgroundColor = "white";
+  document.getElementById("2:" + c).style.backgroundColor = "white";
+  document.getElementById("3:" + c).style.backgroundColor = "white";
+  document.getElementById("4:" + c).style.backgroundColor = "white";
+  document.getElementById("5:" + c).style.backgroundColor = "white";
+  document.getElementById("6:" + c).style.backgroundColor = "white";
+  };
+  //cars
+  document.getElementById("4:0").style.backgroundColor = "red";
+  document.getElementById("0:0").style.backgroundColor = "orange";
+  document.getElementById("1:0").style.backgroundColor = "orange";
+  document.getElementById("2:0").style.backgroundColor = "orange";
+  document.getElementById("3:0").style.backgroundColor = "orange";
+  document.getElementById("0:1").style.backgroundColor = "yellow";
+  document.getElementById("1:1").style.backgroundColor = "yellow";
+  document.getElementById("2:1").style.backgroundColor = "yellow";
+  document.getElementById("3:1").style.backgroundColor = "yellow";
+  document.getElementById("6:0").style.backgroundColor = "green";
+  document.getElementById("6:1").style.backgroundColor = "green";
+  document.getElementById("6:2").style.backgroundColor = "green";
+  document.getElementById("5:0").style.backgroundColor = "blue";
+  document.getElementById("5:1").style.backgroundColor = "blue";
+  document.getElementById("5:2").style.backgroundColor = "blue";
+  document.getElementById("4:4").style.backgroundColor = "purple";
+  document.getElementById("5:4").style.backgroundColor = "purple";
+  document.getElementById("6:4").style.backgroundColor = "purple";
+  document.getElementById("4:5").style.backgroundColor = "magenta";
+  document.getElementById("5:5").style.backgroundColor = "magenta";
+  document.getElementById("6:5").style.backgroundColor = "magenta";
+  document.getElementById("0:5").style.backgroundColor = "black";
+  document.getElementById("0:4").style.backgroundColor = "black";
+  document.getElementById("1:5").style.backgroundColor = "lime";
+  document.getElementById("1:4").style.backgroundColor = "lime";
+   document.getElementById("4:2").style.backgroundColor = "aqua";
+  document.getElementById("2:2").style.backgroundColor = "aqua";
+  document.getElementById("3:2").style.backgroundColor = "aqua";
+  
+ 
+  moves= 1
+document.getElementById("moves").innerHTML = "Moves: 0"
+  for (var c=0 ; c<7 ; c++)
+  {
+  document.getElementById("0:" + c).disabled = false;
+  document.getElementById("1:" + c).disabled = false;
+  document.getElementById("2:" + c).disabled = false;
+  document.getElementById("3:" + c).disabled = false;
+  document.getElementById("4:" + c).disabled = false;
+  document.getElementById("5:" + c).disabled = false;
+  document.getElementById("6:" + c).disabled = false;
+  };
+     document.getElementById("message").innerHTML = "";
+   if(highscore5==1000000)
+   {document.getElementById("hs").innerHTML = "Highscore: 0"}
+   else { document.getElementById("hs").innerHTML = "Highscore: " +highscore5}
+
+  document.getElementById("6th").style.display = "table-row";
+  document.getElementById("five").style.display = "table-row";
+  document.getElementById("timer").style.display = "block";
+  document.getElementById("2:0").value = "";
+  document.getElementById("6:6").style.display = "none";
+  document.getElementById("message").innerHTML = "Hint: In order to teleport move the orange bus down!";
+ 
+}
+
+function random() //chooses a random level from 1-5
+{
+var r = Math.floor(Math.random()*5)+1;
+if (r==1) {one()};
+if (r==2) {two()};
+if (r==3) {three()};
+if (r==4) {four()};
+if (r==5) {five()};
+};
+
+function move1(x) //all of the vehicle movement for level 1
+{ /*up*/ document.getElementById("moves").innerHTML = "Moves: " + moves;
+//The yellow vehicles movement for level 1
+if (x == '2:5' && document.getElementById("2:5").style.backgroundColor == "yellow" && document.getElementById("1:5").style.backgroundColor == "white")
+{
+  document.getElementById("3:5").style.backgroundColor = "white"
+  document.getElementById("1:5").style.backgroundColor = "yellow"
+  moves++
+}
+else if (x == '1:5' && document.getElementById("1:5").style.backgroundColor == "yellow" && document.getElementById("0:5").style.backgroundColor == "white")
+{
+  document.getElementById("2:5").style.backgroundColor = "white"
+  document.getElementById("0:5").style.backgroundColor = "yellow"
+  moves++
+}
+else if (x == '3:5' && document.getElementById("3:5").style.backgroundColor == "yellow" && document.getElementById("2:5").style.backgroundColor == "white")
+{
+  document.getElementById("4:5").style.backgroundColor = "white"
+  document.getElementById("2:5").style.backgroundColor = "yellow"
+  moves++
+}
+else if (x == '4:5' && document.getElementById("4:5").style.backgroundColor == "yellow" && document.getElementById("3:5").style.backgroundColor == "white")
+{
+  document.getElementById("5:5").style.backgroundColor = "white"
+  document.getElementById("3:5").style.backgroundColor = "yellow"
+  moves++
+}
+//down
+else if (x == '3:5' && document.getElementById("3:5").style.backgroundColor == "yellow" && document.getElementById("4:5").style.backgroundColor == "white")
+{
+  document.getElementById("2:5").style.backgroundColor = "white"
+  document.getElementById("4:5").style.backgroundColor = "yellow"
+  moves++
+}
+else if (x == '2:5' && document.getElementById("2:5").style.backgroundColor == "yellow" && document.getElementById("3:5").style.backgroundColor == "white")
+{
+  document.getElementById("1:5").style.backgroundColor = "white"
+  document.getElementById("3:5").style.backgroundColor = "yellow"
+  moves++
+}
+else if (x == '1:5' && document.getElementById("1:5").style.backgroundColor == "yellow" && document.getElementById("2:5").style.backgroundColor == "white")
+{
+  document.getElementById("0:5").style.backgroundColor = "white"
+  document.getElementById("2:5").style.backgroundColor = "yellow"
+  moves++
+}
+else if (x == '4:5' && document.getElementById("4:5").style.backgroundColor == "yellow" && document.getElementById("5:5").style.backgroundColor == "white")
+{
+  document.getElementById("3:5").style.backgroundColor = "white"
+  document.getElementById("5:5").style.backgroundColor = "yellow"
+  moves++
+}
+//The lime vehicles movement for level 1
+else if (x == '5:3' && document.getElementById("5:3").style.backgroundColor == "lime" && document.getElementById("5:2").style.backgroundColor == "white")
+{
+  document.getElementById("5:5").style.backgroundColor = "white"
+  document.getElementById("5:2").style.backgroundColor = "lime"
+  moves++
+}
+else if (x == '5:2' && document.getElementById("5:2").style.backgroundColor == "lime" && document.getElementById("5:1").style.backgroundColor == "white")
+{
+  document.getElementById("5:4").style.backgroundColor = "white"
+  document.getElementById("5:1").style.backgroundColor = "lime"
+  moves++
+}
+else if (x == '5:1' && document.getElementById("5:1").style.backgroundColor == "lime" && document.getElementById("5:0").style.backgroundColor == "white")
+{
+  document.getElementById("5:3").style.backgroundColor = "white"
+  document.getElementById("5:0").style.backgroundColor = "lime"
+  moves++
+}
+else if (x == '5:2' && document.getElementById("5:2").style.backgroundColor == "lime" && document.getElementById("5:3").style.backgroundColor == "white")
+{
+  document.getElementById("5:0").style.backgroundColor = "white"
+  document.getElementById("5:3").style.backgroundColor = "lime"
+  moves++
+}
+else if (x == '5:3' && document.getElementById("5:3").style.backgroundColor == "lime" && document.getElementById("5:4").style.backgroundColor == "white")
+{
+  document.getElementById("5:1").style.backgroundColor = "white"
+  document.getElementById("5:4").style.backgroundColor = "lime"
+  moves++
+}
+else if (x == '5:4' && document.getElementById("5:4").style.backgroundColor == "lime" && document.getElementById("5:5").style.backgroundColor == "white")
+{
+  document.getElementById("5:2").style.backgroundColor = "white"
+  document.getElementById("5:5").style.backgroundColor = "lime"
+  moves++
+}
+//The black vehicles movement for level 1
+else if (x == '3:3' && document.getElementById("3:3").style.backgroundColor == "black" && document.getElementById("2:3").style.backgroundColor == "white")
+{
+  document.getElementById("5:3").style.backgroundColor = "white"
+  document.getElementById("2:3").style.backgroundColor = "black"
+  moves++
+}
+else if (x == '2:3' && document.getElementById("2:3").style.backgroundColor == "black" && document.getElementById("1:3").style.backgroundColor == "white")
+{
+  document.getElementById("4:3").style.backgroundColor = "white"
+  document.getElementById("1:3").style.backgroundColor = "black"
+  moves++
+}
+else if (x == '1:3' && document.getElementById("1:3").style.backgroundColor == "black" && document.getElementById("0:3").style.backgroundColor == "white")
+{
+  document.getElementById("3:3").style.backgroundColor = "white"
+  document.getElementById("0:3").style.backgroundColor = "black"
+  moves++
+}
+else if (x == '2:3' && document.getElementById("2:3").style.backgroundColor == "black" && document.getElementById("3:3").style.backgroundColor == "white")
+{
+  document.getElementById("0:3").style.backgroundColor = "white"
+  document.getElementById("3:3").style.backgroundColor = "black"
+  moves++
+}
+else if (x == '3:3' && document.getElementById("3:3").style.backgroundColor == "black" && document.getElementById("4:3").style.backgroundColor == "white")
+{
+  document.getElementById("1:3").style.backgroundColor = "white"
+  document.getElementById("4:3").style.backgroundColor = "black"
+  moves++
+}
+else if (x == '4:3' && document.getElementById("4:3").style.backgroundColor == "black" && document.getElementById("5:3").style.backgroundColor == "white")
+{
+  document.getElementById("2:3").style.backgroundColor = "white"
+  document.getElementById("5:3").style.backgroundColor = "black"
+  moves++
+}
+};
+
+function move2(x) //all of the vehicle movement for level 2
+{ document.getElementById("moves").innerHTML = "Moves: " + moves;
+//The yellow vehicles movement for level 2
+if (x == '3:1' && document.getElementById("3:1").style.backgroundColor == "yellow" && document.getElementById("3:0").style.backgroundColor == "white")
+{
+  document.getElementById("3:2").style.backgroundColor = "white"
+  document.getElementById("3:0").style.backgroundColor = "yellow"
+  moves++
+}
+else if (x == '3:2' && document.getElementById("3:2").style.backgroundColor == "yellow" && document.getElementById("3:1").style.backgroundColor == "white")
+{
+  document.getElementById("3:3").style.backgroundColor = "white"
+  document.getElementById("3:1").style.backgroundColor = "yellow"
+  moves++
+}
+else if (x == '3:3' && document.getElementById("3:3").style.backgroundColor == "yellow" && document.getElementById("3:2").style.backgroundColor == "white")
+{
+  document.getElementById("3:4").style.backgroundColor = "white"
+  document.getElementById("3:2").style.backgroundColor = "yellow"
+  moves++
+}
+else if (x == '3:4' && document.getElementById("3:4").style.backgroundColor == "yellow" && document.getElementById("3:3").style.backgroundColor == "white")
+{
+  document.getElementById("3:5").style.backgroundColor = "white"
+  document.getElementById("3:3").style.backgroundColor = "yellow"
+  moves++
+}
+else if (x == '3:1' && document.getElementById("3:1").style.backgroundColor == "yellow" && document.getElementById("3:2").style.backgroundColor == "white")
+{
+  document.getElementById("3:0").style.backgroundColor = "white"
+  document.getElementById("3:2").style.backgroundColor = "yellow"
+  moves++
+}
+else if (x == '3:2' && document.getElementById("3:2").style.backgroundColor == "yellow" && document.getElementById("3:3").style.backgroundColor == "white")
+{
+  document.getElementById("3:1").style.backgroundColor = "white"
+  document.getElementById("3:3").style.backgroundColor = "yellow"
+  moves++
+}
+else if (x == '3:3' && document.getElementById("3:3").style.backgroundColor == "yellow" && document.getElementById("3:4").style.backgroundColor == "white")
+{
+  document.getElementById("3:2").style.backgroundColor = "white"
+  document.getElementById("3:4").style.backgroundColor = "yellow"
+  moves++
+}
+else if (x == '3:4' && document.getElementById("3:4").style.backgroundColor == "yellow" && document.getElementById("3:5").style.backgroundColor == "white")
+{
+  document.getElementById("3:3").style.backgroundColor = "white"
+  document.getElementById("3:5").style.backgroundColor = "yellow"
+  moves++
+}
+//The pink vehicles movement for level 2
+else if (x == '0:1' && document.getElementById("0:1").style.backgroundColor == "pink" && document.getElementById("0:0").style.backgroundColor == "white")
+{
+  document.getElementById("0:2").style.backgroundColor = "white"
+  document.getElementById("0:0").style.backgroundColor = "pink"
+  moves++
+}
+else if (x == '0:2' && document.getElementById("0:2").style.backgroundColor == "pink" && document.getElementById("0:1").style.backgroundColor == "white")
+{
+  document.getElementById("0:3").style.backgroundColor = "white"
+  document.getElementById("0:1").style.backgroundColor = "pink"
+  moves++
+}
+else if (x == '0:3' && document.getElementById("0:3").style.backgroundColor == "pink" && document.getElementById("0:2").style.backgroundColor == "white")
+{
+  document.getElementById("0:4").style.backgroundColor = "white"
+  document.getElementById("0:2").style.backgroundColor = "pink"
+  moves++
+}
+else if (x == '0:4' && document.getElementById("0:4").style.backgroundColor == "pink" && document.getElementById("0:3").style.backgroundColor == "white")
+{
+  document.getElementById("0:5").style.backgroundColor = "white"
+  document.getElementById("0:3").style.backgroundColor = "pink"
+  moves++
+}
+else if (x == '0:1' && document.getElementById("0:1").style.backgroundColor == "pink" && document.getElementById("0:2").style.backgroundColor == "white")
+{
+  document.getElementById("0:0").style.backgroundColor = "white"
+  document.getElementById("0:2").style.backgroundColor = "pink"
+  moves++
+}
+else if (x == '0:2' && document.getElementById("0:2").style.backgroundColor == "pink" && document.getElementById("0:3").style.backgroundColor == "white")
+{
+  document.getElementById("0:1").style.backgroundColor = "white"
+  document.getElementById("0:3").style.backgroundColor = "pink"
+  moves++
+}
+else if (x == '0:3' && document.getElementById("0:3").style.backgroundColor == "pink" && document.getElementById("0:4").style.backgroundColor == "white")
+{
+  document.getElementById("0:2").style.backgroundColor = "white"
+  document.getElementById("0:4").style.backgroundColor = "pink"
+  moves++
+}
+else if (x == '0:4' && document.getElementById("0:4").style.backgroundColor == "pink" && document.getElementById("0:3").style.backgroundColor == "white")
+{
+  document.getElementById("0:5").style.backgroundColor = "white"
+  document.getElementById("0:3").style.backgroundColor = "pink"
+  moves++
+}
+else if (x == '0:4' && document.getElementById("0:4").style.backgroundColor == "pink" && document.getElementById("0:5").style.backgroundColor == "white")
+{
+  document.getElementById("0:3").style.backgroundColor = "white"
+  document.getElementById("0:5").style.backgroundColor = "pink"
+  moves++
+}
+//The purple vehicles movement for level 2
+else if (x == '4:3' && document.getElementById("4:3").style.backgroundColor == "purple" && document.getElementById("4:2").style.backgroundColor == "white")
+{
+  document.getElementById("4:5").style.backgroundColor = "white"
+  document.getElementById("4:2").style.backgroundColor = "purple"
+  moves++
+}
+else if (x == '4:2' && document.getElementById("4:2").style.backgroundColor == "purple" && document.getElementById("4:1").style.backgroundColor == "white")
+{
+  document.getElementById("4:4").style.backgroundColor = "white"
+  document.getElementById("4:1").style.backgroundColor = "purple"
+  moves++
+}
+else if (x == '4:1' && document.getElementById("4:1").style.backgroundColor == "purple" && document.getElementById("4:0").style.backgroundColor == "white")
+{
+  document.getElementById("4:3").style.backgroundColor = "white"
+  document.getElementById("4:0").style.backgroundColor = "purple"
+  moves++
+}
+else if (x == '4:2' && document.getElementById("4:2").style.backgroundColor == "purple" && document.getElementById("4:3").style.backgroundColor == "white")
+{
+  document.getElementById("4:0").style.backgroundColor = "white"
+  document.getElementById("4:3").style.backgroundColor = "purple"
+  moves++
+}
+else if (x == '4:3' && document.getElementById("4:3").style.backgroundColor == "purple" && document.getElementById("4:4").style.backgroundColor == "white")
+{
+  document.getElementById("4:1").style.backgroundColor = "white"
+  document.getElementById("4:4").style.backgroundColor = "purple"
+  moves++
+}
+else if (x == '4:4' && document.getElementById("4:4").style.backgroundColor == "purple" && document.getElementById("4:5").style.backgroundColor == "white")
+{
+  document.getElementById("4:2").style.backgroundColor = "white"
+  document.getElementById("4:5").style.backgroundColor = "purple"
+  moves++
+}
+//The orange vehicles movement for level 2
+else if (x == '3:2' && document.getElementById("3:2").style.backgroundColor == "orange" && document.getElementById("2:2").style.backgroundColor == "white")
+{
+  document.getElementById("5:2").style.backgroundColor = "white"
+  document.getElementById("2:2").style.backgroundColor = "orange"
+  moves++
+}
+else if (x == '2:2' && document.getElementById("2:2").style.backgroundColor == "orange" && document.getElementById("1:2").style.backgroundColor == "white")
+{
+  document.getElementById("4:2").style.backgroundColor = "white"
+  document.getElementById("1:2").style.backgroundColor = "orange"
+  moves++
+}
+else if (x == '1:2' && document.getElementById("1:2").style.backgroundColor == "orange" && document.getElementById("0:2").style.backgroundColor == "white")
+{
+  document.getElementById("3:2").style.backgroundColor = "white"
+  document.getElementById("0:2").style.backgroundColor = "orange"
+  moves++
+}
+else if (x == '2:2' && document.getElementById("2:2").style.backgroundColor == "orange" && document.getElementById("3:2").style.backgroundColor == "white")
+{
+  document.getElementById("0:2").style.backgroundColor = "white"
+  document.getElementById("3:2").style.backgroundColor = "orange"
+  moves++
+}
+else if (x == '3:2' && document.getElementById("3:2").style.backgroundColor == "orange" && document.getElementById("4:2").style.backgroundColor == "white")
+{
+  document.getElementById("1:2").style.backgroundColor = "white"
+  document.getElementById("4:2").style.backgroundColor = "orange"
+  moves++
+}
+else if (x == '4:2' && document.getElementById("4:2").style.backgroundColor == "orange" && document.getElementById("5:2").style.backgroundColor == "white")
+{
+  document.getElementById("2:2").style.backgroundColor = "white"
+  document.getElementById("5:2").style.backgroundColor = "orange"
+  moves++
+}
+//The black vehicles movement for level 2
+else if (x == '3:4' && document.getElementById("3:4").style.backgroundColor == "black" && document.getElementById("2:4").style.backgroundColor == "white")
+{
+  document.getElementById("5:4").style.backgroundColor = "white"
+  document.getElementById("2:4").style.backgroundColor = "black"
+  moves++
+}
+else if (x == '2:4' && document.getElementById("2:4").style.backgroundColor == "black" && document.getElementById("1:4").style.backgroundColor == "white")
+{
+  document.getElementById("4:4").style.backgroundColor = "white"
+  document.getElementById("1:4").style.backgroundColor = "black"
+  moves++
+}
+else if (x == '1:4' && document.getElementById("1:4").style.backgroundColor == "black" && document.getElementById("0:4").style.backgroundColor == "white")
+{
+  document.getElementById("3:4").style.backgroundColor = "white"
+  document.getElementById("0:4").style.backgroundColor = "black"
+  moves++
+}
+else if (x == '2:4' && document.getElementById("2:4").style.backgroundColor == "black" && document.getElementById("3:4").style.backgroundColor == "white")
+{
+  document.getElementById("0:4").style.backgroundColor = "white"
+  document.getElementById("3:4").style.backgroundColor = "black"
+  moves++
+}
+else if (x == '3:4' && document.getElementById("3:4").style.backgroundColor == "black" && document.getElementById("4:4").style.backgroundColor == "white")
+{
+  document.getElementById("1:4").style.backgroundColor = "white"
+  document.getElementById("4:4").style.backgroundColor = "black"
+  moves++
+}
+else if (x == '4:4' && document.getElementById("4:4").style.backgroundColor == "black" && document.getElementById("5:4").style.backgroundColor == "white")
+{
+  document.getElementById("2:4").style.backgroundColor = "white"
+  document.getElementById("5:4").style.backgroundColor = "black"
+  moves++
+}
+else{}
+}
+
+function move3(x) //all of the vehicle movement for level 3
+{ document.getElementById("moves").innerHTML = "Moves: " + moves;
+//The orange vehicles movement for level 3
+if (x == '3:2' && document.getElementById("3:2").style.backgroundColor == "orange" && document.getElementById("2:2").style.backgroundColor == "white")
+{
+  document.getElementById("5:2").style.backgroundColor = "white"
+  document.getElementById("2:2").style.backgroundColor = "orange"
+  moves++
+}
+else if (x == '2:2' && document.getElementById("2:2").style.backgroundColor == "orange" && document.getElementById("1:2").style.backgroundColor == "white")
+{
+  document.getElementById("4:2").style.backgroundColor = "white"
+  document.getElementById("1:2").style.backgroundColor = "orange"
+  moves++
+}
+else if (x == '1:2' && document.getElementById("1:2").style.backgroundColor == "orange" && document.getElementById("0:2").style.backgroundColor == "white")
+{
+  document.getElementById("3:2").style.backgroundColor = "white"
+  document.getElementById("0:2").style.backgroundColor = "orange"
+  moves++
+}
+else if (x == '2:2' && document.getElementById("2:2").style.backgroundColor == "orange" && document.getElementById("3:2").style.backgroundColor == "white")
+{
+  document.getElementById("0:2").style.backgroundColor = "white"
+  document.getElementById("3:2").style.backgroundColor = "orange"
+  moves++
+}
+else if (x == '3:2' && document.getElementById("3:2").style.backgroundColor == "orange" && document.getElementById("4:2").style.backgroundColor == "white")
+{
+  document.getElementById("1:2").style.backgroundColor = "white"
+  document.getElementById("4:2").style.backgroundColor = "orange"
+  moves++
+}
+else if (x == '4:2' && document.getElementById("4:2").style.backgroundColor == "orange" && document.getElementById("5:2").style.backgroundColor == "white")
+{
+  document.getElementById("2:2").style.backgroundColor = "white"
+  document.getElementById("5:2").style.backgroundColor = "orange"
+  moves++
+}
+//The yellow vehicles movement for level 3
+else if (x == '2:5' && document.getElementById("2:5").style.backgroundColor == "yellow" && document.getElementById("1:5").style.backgroundColor == "white")
+{
+  document.getElementById("3:5").style.backgroundColor = "white"
+  document.getElementById("1:5").style.backgroundColor = "yellow"
+  moves++
+}
+else if (x == '1:5' && document.getElementById("1:5").style.backgroundColor == "yellow" && document.getElementById("0:5").style.backgroundColor == "white")
+{
+  document.getElementById("2:5").style.backgroundColor = "white"
+  document.getElementById("0:5").style.backgroundColor = "yellow"
+  moves++
+}
+else if (x == '3:5' && document.getElementById("3:5").style.backgroundColor == "yellow" && document.getElementById("2:5").style.backgroundColor == "white")
+{
+  document.getElementById("4:5").style.backgroundColor = "white"
+  document.getElementById("2:5").style.backgroundColor = "yellow"
+  moves++
+}
+else if (x == '4:5' && document.getElementById("4:5").style.backgroundColor == "yellow" && document.getElementById("3:5").style.backgroundColor == "white")
+{
+  document.getElementById("5:5").style.backgroundColor = "white"
+  document.getElementById("3:5").style.backgroundColor = "yellow"
+  moves++
+}
+//down
+else if (x == '3:5' && document.getElementById("3:5").style.backgroundColor == "yellow" && document.getElementById("4:5").style.backgroundColor == "white")
+{
+  document.getElementById("2:5").style.backgroundColor = "white"
+  document.getElementById("4:5").style.backgroundColor = "yellow"
+  moves++
+}
+else if (x == '2:5' && document.getElementById("2:5").style.backgroundColor == "yellow" && document.getElementById("3:5").style.backgroundColor == "white")
+{
+  document.getElementById("1:5").style.backgroundColor = "white"
+  document.getElementById("3:5").style.backgroundColor = "yellow"
+  moves++
+}
+else if (x == '1:5' && document.getElementById("1:5").style.backgroundColor == "yellow" && document.getElementById("2:5").style.backgroundColor == "white")
+{
+  document.getElementById("0:5").style.backgroundColor = "white"
+  document.getElementById("2:5").style.backgroundColor = "yellow"
+  moves++
+}
+else if (x == '4:5' && document.getElementById("4:5").style.backgroundColor == "yellow" && document.getElementById("5:5").style.backgroundColor == "white")
+{
+  document.getElementById("3:5").style.backgroundColor = "white"
+  document.getElementById("5:5").style.backgroundColor = "yellow"
+  moves++
+}
+//The pink vehicles movement for level 3
+else if (x == '5:3' && document.getElementById("5:3").style.backgroundColor == "pink" && document.getElementById("5:2").style.backgroundColor == "white")
+{
+  document.getElementById("5:5").style.backgroundColor = "white"
+  document.getElementById("5:2").style.backgroundColor = "pink"
+  moves++
+}
+else if (x == '5:2' && document.getElementById("5:2").style.backgroundColor == "pink" && document.getElementById("5:1").style.backgroundColor == "white")
+{
+  document.getElementById("5:4").style.backgroundColor = "white"
+  document.getElementById("5:1").style.backgroundColor = "pink"
+  moves++
+}
+else if (x == '5:1' && document.getElementById("5:1").style.backgroundColor == "pink" && document.getElementById("5:0").style.backgroundColor == "white")
+{
+  document.getElementById("5:3").style.backgroundColor = "white"
+  document.getElementById("5:0").style.backgroundColor = "pink"
+  moves++
+}
+else if (x == '5:2' && document.getElementById("5:2").style.backgroundColor == "pink" && document.getElementById("5:3").style.backgroundColor == "white")
+{
+  document.getElementById("5:0").style.backgroundColor = "white"
+  document.getElementById("5:3").style.backgroundColor = "pink"
+  moves++
+}
+else if (x == '5:3' && document.getElementById("5:3").style.backgroundColor == "pink" && document.getElementById("5:4").style.backgroundColor == "white")
+{
+  document.getElementById("5:1").style.backgroundColor = "white"
+  document.getElementById("5:4").style.backgroundColor = "pink"
+  moves++
+}
+else if (x == '5:4' && document.getElementById("5:4").style.backgroundColor == "pink" && document.getElementById("5:5").style.backgroundColor == "white")
+{
+  document.getElementById("5:2").style.backgroundColor = "white"
+  document.getElementById("5:5").style.backgroundColor = "pink"
+  moves++
+}
+//The lime vehicles movement for level 3
+if (x == '3:0' && document.getElementById("3:0").style.backgroundColor == "lime" && document.getElementById("2:0").style.backgroundColor == "white")
+{
+  document.getElementById("5:0").style.backgroundColor = "white"
+  document.getElementById("2:0").style.backgroundColor = "lime"
+  moves++
+}
+else if (x == '2:0' && document.getElementById("2:0").style.backgroundColor == "lime" && document.getElementById("1:0").style.backgroundColor == "white")
+{
+  document.getElementById("4:0").style.backgroundColor = "white"
+  document.getElementById("1:0").style.backgroundColor = "lime"
+  moves++
+}
+else if (x == '1:0' && document.getElementById("1:0").style.backgroundColor == "lime" && document.getElementById("0:0").style.backgroundColor == "white")
+{
+  document.getElementById("3:0").style.backgroundColor = "white"
+  document.getElementById("0:0").style.backgroundColor = "lime"
+  moves++
+}
+else if (x == '2:0' && document.getElementById("2:0").style.backgroundColor == "lime" && document.getElementById("3:0").style.backgroundColor == "white")
+{
+  document.getElementById("0:0").style.backgroundColor = "white"
+  document.getElementById("3:0").style.backgroundColor = "lime"
+  moves++
+}
+else if (x == '3:0' && document.getElementById("3:0").style.backgroundColor == "lime" && document.getElementById("4:0").style.backgroundColor == "white")
+{
+  document.getElementById("1:0").style.backgroundColor = "white"
+  document.getElementById("4:0").style.backgroundColor = "lime"
+  moves++
+}
+else if (x == '4:0' && document.getElementById("4:0").style.backgroundColor == "lime" && document.getElementById("5:0").style.backgroundColor == "white")
+{
+  document.getElementById("2:0").style.backgroundColor = "white"
+  document.getElementById("5:0").style.backgroundColor = "lime"
+  moves++
+}
+//The black vehicles movement for level 3
+else if (x == '1:3' && document.getElementById("1:3").style.backgroundColor == "black" && document.getElementById("1:2").style.backgroundColor == "white")
+{
+  document.getElementById("1:5").style.backgroundColor = "white"
+  document.getElementById("1:2").style.backgroundColor = "black"
+  moves++
+}
+else if (x == '1:2' && document.getElementById("1:2").style.backgroundColor == "black" && document.getElementById("1:1").style.backgroundColor == "white")
+{
+  document.getElementById("1:4").style.backgroundColor = "white"
+  document.getElementById("1:1").style.backgroundColor = "black"
+  moves++
+}
+else if (x == '1:1' && document.getElementById("1:1").style.backgroundColor == "black" && document.getElementById("1:0").style.backgroundColor == "white")
+{
+  document.getElementById("1:3").style.backgroundColor = "white"
+  document.getElementById("1:0").style.backgroundColor = "black"
+  moves++
+}
+else if (x == '1:2' && document.getElementById("1:2").style.backgroundColor == "black" && document.getElementById("1:3").style.backgroundColor == "white")
+{
+  document.getElementById("1:0").style.backgroundColor = "white"
+  document.getElementById("1:3").style.backgroundColor = "black"
+  moves++
+}
+else if (x == '1:3' && document.getElementById("1:3").style.backgroundColor == "black" && document.getElementById("1:4").style.backgroundColor == "white")
+{
+  document.getElementById("1:1").style.backgroundColor = "white"
+  document.getElementById("1:4").style.backgroundColor = "black"
+  moves++
+}
+else if (x == '1:4' && document.getElementById("1:4").style.backgroundColor == "black" && document.getElementById("1:5").style.backgroundColor == "white")
+{
+  document.getElementById("1:2").style.backgroundColor = "white"
+  document.getElementById("1:5").style.backgroundColor = "black"
+  moves++
+}
+//The purple vehicles movement for level 3
+else if (x == '2:1' && document.getElementById("2:1").style.backgroundColor == "purple" && document.getElementById("1:1").style.backgroundColor == "white")
+{
+  document.getElementById("3:1").style.backgroundColor = "white"
+  document.getElementById("1:1").style.backgroundColor = "purple"
+  moves++
+}
+else if (x == '1:1' && document.getElementById("1:1").style.backgroundColor == "purple" && document.getElementById("0:1").style.backgroundColor == "white")
+{
+  document.getElementById("2:1").style.backgroundColor = "white"
+  document.getElementById("0:1").style.backgroundColor = "purple"
+  moves++
+}
+else if (x == '3:1' && document.getElementById("3:1").style.backgroundColor == "purple" && document.getElementById("2:1").style.backgroundColor == "white")
+{
+  document.getElementById("4:1").style.backgroundColor = "white"
+  document.getElementById("2:1").style.backgroundColor = "purple"
+  moves++
+}
+else if (x == '4:1' && document.getElementById("4:1").style.backgroundColor == "purple" && document.getElementById("3:1").style.backgroundColor == "white")
+{
+  document.getElementById("5:1").style.backgroundColor = "white"
+  document.getElementById("3:1").style.backgroundColor = "purple"
+  moves++
+}
+//down
+else if (x == '3:1' && document.getElementById("3:1").style.backgroundColor == "purple" && document.getElementById("4:1").style.backgroundColor == "white")
+{
+  document.getElementById("2:1").style.backgroundColor = "white"
+  document.getElementById("4:1").style.backgroundColor = "purple"
+  moves++
+}
+else if (x == '2:1' && document.getElementById("2:1").style.backgroundColor == "purple" && document.getElementById("3:1").style.backgroundColor == "white")
+{
+  document.getElementById("1:1").style.backgroundColor = "white"
+  document.getElementById("3:1").style.backgroundColor = "purple"
+  moves++
+}
+else if (x == '1:1' && document.getElementById("1:1").style.backgroundColor == "purple" && document.getElementById("2:1").style.backgroundColor == "white")
+{
+  document.getElementById("0:1").style.backgroundColor = "white"
+  document.getElementById("2:1").style.backgroundColor = "purple"
+  moves++
+}
+else if (x == '4:1' && document.getElementById("4:1").style.backgroundColor == "purple" && document.getElementById("5:1").style.backgroundColor == "white")
+{
+  document.getElementById("3:1").style.backgroundColor = "white"
+  document.getElementById("5:1").style.backgroundColor = "purple"
+  moves++
+}
+else{};
+};
+
+function move4(x) //all of the vehicle movement for level 4
+{ document.getElementById("moves").innerHTML = "Moves: " + moves;
+//The yellow vehicles movement for level 4
+if (x == '3:5' && document.getElementById("3:5").style.backgroundColor == "yellow" && document.getElementById("2:5").style.backgroundColor == "white")
+{
+  document.getElementById("5:5").style.backgroundColor = "white"
+  document.getElementById("2:5").style.backgroundColor = "yellow"
+  moves++
+}
+else if (x == '2:5' && document.getElementById("2:5").style.backgroundColor == "yellow" && document.getElementById("1:5").style.backgroundColor == "white")
+{
+  document.getElementById("4:5").style.backgroundColor = "white"
+  document.getElementById("1:5").style.backgroundColor = "yellow"
+  moves++
+}
+else if (x == '1:5' && document.getElementById("1:5").style.backgroundColor == "yellow" && document.getElementById("0:5").style.backgroundColor == "white")
+{
+  document.getElementById("3:5").style.backgroundColor = "white"
+  document.getElementById("0:5").style.backgroundColor = "yellow"
+  moves++
+}
+else if (x == '2:5' && document.getElementById("2:5").style.backgroundColor == "yellow" && document.getElementById("3:5").style.backgroundColor == "white")
+{
+  document.getElementById("0:5").style.backgroundColor = "white"
+  document.getElementById("3:5").style.backgroundColor = "yellow"
+  moves++
+}
+else if (x == '3:5' && document.getElementById("3:5").style.backgroundColor == "yellow" && document.getElementById("4:5").style.backgroundColor == "white")
+{
+  document.getElementById("1:5").style.backgroundColor = "white"
+  document.getElementById("4:5").style.backgroundColor = "yellow"
+  moves++
+}
+else if (x == '4:5' && document.getElementById("4:5").style.backgroundColor == "yellow" && document.getElementById("5:5").style.backgroundColor == "white")
+{
+  document.getElementById("2:5").style.backgroundColor = "white"
+  document.getElementById("5:5").style.backgroundColor = "yellow"
+  moves++
+}
+//The aqua vehicles movement for level 4
+else if (x == '3:2' && document.getElementById("3:2").style.backgroundColor == "aqua" && document.getElementById("2:2").style.backgroundColor == "white")
+{
+  document.getElementById("5:2").style.backgroundColor = "white"
+  document.getElementById("2:2").style.backgroundColor = "aqua"
+  moves++
+}
+else if (x == '2:2' && document.getElementById("2:2").style.backgroundColor == "aqua" && document.getElementById("1:2").style.backgroundColor == "white")
+{
+  document.getElementById("4:2").style.backgroundColor = "white"
+  document.getElementById("1:2").style.backgroundColor = "aqua"
+  moves++
+}
+else if (x == '1:2' && document.getElementById("1:2").style.backgroundColor == "aqua" && document.getElementById("0:2").style.backgroundColor == "white")
+{
+  document.getElementById("3:2").style.backgroundColor = "white"
+  document.getElementById("0:2").style.backgroundColor = "aqua"
+  moves++
+}
+else if (x == '2:2' && document.getElementById("2:2").style.backgroundColor == "aqua" && document.getElementById("3:2").style.backgroundColor == "white")
+{
+  document.getElementById("0:2").style.backgroundColor = "white"
+  document.getElementById("3:2").style.backgroundColor = "aqua"
+  moves++
+}
+else if (x == '3:2' && document.getElementById("3:2").style.backgroundColor == "aqua" && document.getElementById("4:2").style.backgroundColor == "white")
+{
+  document.getElementById("1:2").style.backgroundColor = "white"
+  document.getElementById("4:2").style.backgroundColor = "aqua"
+  moves++
+}
+else if (x == '4:2' && document.getElementById("4:2").style.backgroundColor == "aqua" && document.getElementById("5:2").style.backgroundColor == "white")
+{
+  document.getElementById("2:2").style.backgroundColor = "white"
+  document.getElementById("5:2").style.backgroundColor = "aqua"
+  moves++
+}
+//The magenta vehicles movement for level 4
+else if (x == '2:4' && document.getElementById("2:4").style.backgroundColor == "magenta" && document.getElementById("1:4").style.backgroundColor == "white")
+{
+  document.getElementById("3:4").style.backgroundColor = "white"
+  document.getElementById("1:4").style.backgroundColor = "magenta"
+  moves++
+}
+else if (x == '1:4' && document.getElementById("1:4").style.backgroundColor == "magenta" && document.getElementById("0:4").style.backgroundColor == "white")
+{
+  document.getElementById("2:4").style.backgroundColor = "white"
+  document.getElementById("0:4").style.backgroundColor = "magenta"
+  moves++
+}
+else if (x == '3:4' && document.getElementById("3:4").style.backgroundColor == "magenta" && document.getElementById("2:4").style.backgroundColor == "white")
+{
+  document.getElementById("4:4").style.backgroundColor = "white"
+  document.getElementById("2:4").style.backgroundColor = "magenta"
+  moves++
+}
+else if (x == '4:4' && document.getElementById("4:4").style.backgroundColor == "magenta" && document.getElementById("3:4").style.backgroundColor == "white")
+{
+  document.getElementById("5:4").style.backgroundColor = "white"
+  document.getElementById("3:4").style.backgroundColor = "magenta"
+  moves++
+}
+//down
+else if (x == '3:4' && document.getElementById("3:4").style.backgroundColor == "magenta" && document.getElementById("4:4").style.backgroundColor == "white")
+{
+  document.getElementById("2:4").style.backgroundColor = "white"
+  document.getElementById("4:4").style.backgroundColor = "magenta"
+  moves++
+}
+else if (x == '2:4' && document.getElementById("2:4").style.backgroundColor == "magenta" && document.getElementById("3:4").style.backgroundColor == "white")
+{
+  document.getElementById("1:4").style.backgroundColor = "white"
+  document.getElementById("3:4").style.backgroundColor = "magenta"
+  moves++
+}
+else if (x == '1:4' && document.getElementById("1:4").style.backgroundColor == "yellow" && document.getElementById("2:4").style.backgroundColor == "white")
+{
+  document.getElementById("0:4").style.backgroundColor = "white"
+  document.getElementById("2:4").style.backgroundColor = "magenta"
+  moves++
+}
+else if (x == '4:4' && document.getElementById("4:4").style.backgroundColor == "magenta" && document.getElementById("5:4").style.backgroundColor == "white")
+{
+  document.getElementById("3:4").style.backgroundColor = "white"
+  document.getElementById("5:4").style.backgroundColor = "magenta"
+  moves++
+}
+//The grey vehicles movement for level 4
+else if (x == '2:4' && document.getElementById("2:4").style.backgroundColor == "brown" && document.getElementById("1:4").style.backgroundColor == "white")
+{
+  document.getElementById("3:4").style.backgroundColor = "white"
+  document.getElementById("1:4").style.backgroundColor = "brown"
+  moves++
+}
+else if (x == '1:4' && document.getElementById("1:4").style.backgroundColor == "brown" && document.getElementById("0:4").style.backgroundColor == "white")
+{
+  document.getElementById("2:4").style.backgroundColor = "white"
+  document.getElementById("0:4").style.backgroundColor = "brown"
+  moves++
+}
+else if (x == '3:4' && document.getElementById("3:4").style.backgroundColor == "brown" && document.getElementById("2:4").style.backgroundColor == "white")
+{
+  document.getElementById("4:4").style.backgroundColor = "white"
+  document.getElementById("2:4").style.backgroundColor = "brown"
+  moves++
+}
+else if (x == '4:4' && document.getElementById("4:4").style.backgroundColor == "brown" && document.getElementById("3:4").style.backgroundColor == "white")
+{
+  document.getElementById("5:4").style.backgroundColor = "white"
+  document.getElementById("3:4").style.backgroundColor = "brown"
+  moves++
+}
+//down
+else if (x == '3:4' && document.getElementById("3:4").style.backgroundColor == "brown" && document.getElementById("4:4").style.backgroundColor == "white")
+{
+  document.getElementById("2:4").style.backgroundColor = "white"
+  document.getElementById("4:4").style.backgroundColor = "brown"
+  moves++
+}
+else if (x == '2:4' && document.getElementById("2:4").style.backgroundColor == "brown" && document.getElementById("3:4").style.backgroundColor == "white")
+{
+  document.getElementById("1:4").style.backgroundColor = "white"
+  document.getElementById("3:4").style.backgroundColor = "brown"
+  moves++
+}
+else if (x == '1:4' && document.getElementById("1:4").style.backgroundColor == "brown" && document.getElementById("2:4").style.backgroundColor == "white")
+{
+  document.getElementById("0:4").style.backgroundColor = "white"
+  document.getElementById("2:4").style.backgroundColor = "brown"
+  moves++
+}
+else if (x == '4:4' && document.getElementById("4:4").style.backgroundColor == "brown" && document.getElementById("5:4").style.backgroundColor == "white")
+{
+  document.getElementById("3:4").style.backgroundColor = "white"
+  document.getElementById("5:4").style.backgroundColor = "brown"
+  moves++
+}
+//The lime vehicles movement for level 4
+else if (x == '2:3' && document.getElementById("2:3").style.backgroundColor == "lime" && document.getElementById("1:3").style.backgroundColor == "white")
+{
+  document.getElementById("3:3").style.backgroundColor = "white"
+  document.getElementById("1:3").style.backgroundColor = "lime"
+  moves++
+}
+else if (x == '1:3' && document.getElementById("1:3").style.backgroundColor == "lime" && document.getElementById("0:3").style.backgroundColor == "white")
+{
+  document.getElementById("2:3").style.backgroundColor = "white"
+  document.getElementById("0:3").style.backgroundColor = "lime"
+  moves++
+}
+else if (x == '3:3' && document.getElementById("3:3").style.backgroundColor == "lime" && document.getElementById("2:3").style.backgroundColor == "white")
+{
+  document.getElementById("4:3").style.backgroundColor = "white"
+  document.getElementById("2:3").style.backgroundColor = "lime"
+  moves++
+}
+else if (x == '4:3' && document.getElementById("4:3").style.backgroundColor == "lime" && document.getElementById("3:3").style.backgroundColor == "white")
+{
+  document.getElementById("5:3").style.backgroundColor = "white"
+  document.getElementById("3:3").style.backgroundColor = "lime"
+  moves++
+}
+//down
+else if (x == '3:3' && document.getElementById("3:3").style.backgroundColor == "lime" && document.getElementById("4:3").style.backgroundColor == "white")
+{
+  document.getElementById("2:3").style.backgroundColor = "white"
+  document.getElementById("4:3").style.backgroundColor = "lime"
+  moves++
+}
+else if (x == '2:3' && document.getElementById("2:3").style.backgroundColor == "lime" && document.getElementById("3:3").style.backgroundColor == "white")
+{
+  document.getElementById("1:3").style.backgroundColor = "white"
+  document.getElementById("3:3").style.backgroundColor = "lime"
+  moves++
+}
+else if (x == '1:3' && document.getElementById("1:3").style.backgroundColor == "lime" && document.getElementById("2:3").style.backgroundColor == "white")
+{
+  document.getElementById("0:3").style.backgroundColor = "white"
+  document.getElementById("2:3").style.backgroundColor = "lime"
+  moves++
+}
+else if (x == '4:3' && document.getElementById("4:3").style.backgroundColor == "lime" && document.getElementById("5:3").style.backgroundColor == "white")
+{
+  document.getElementById("3:3").style.backgroundColor = "white"
+  document.getElementById("5:3").style.backgroundColor = "lime"
+  moves++
+}
+//The black vehicles movement for level 4
+else if (x == '4:1' && document.getElementById("4:1").style.backgroundColor == "black" && document.getElementById("4:0").style.backgroundColor == "white")
+{
+  document.getElementById("4:2").style.backgroundColor = "white"
+  document.getElementById("4:0").style.backgroundColor = "black"
+  moves++
+}
+else if (x == '4:2' && document.getElementById("4:2").style.backgroundColor == "black" && document.getElementById("4:1").style.backgroundColor == "white")
+{
+  document.getElementById("4:3").style.backgroundColor = "white"
+  document.getElementById("4:1").style.backgroundColor = "black"
+  moves++
+}
+else if (x == '4:3' && document.getElementById("4:3").style.backgroundColor == "black" && document.getElementById("4:2").style.backgroundColor == "white")
+{
+  document.getElementById("4:4").style.backgroundColor = "white"
+  document.getElementById("4:2").style.backgroundColor = "black"
+  moves++
+}
+else if (x == '4:4' && document.getElementById("4:4").style.backgroundColor == "black" && document.getElementById("4:3").style.backgroundColor == "white")
+{
+  document.getElementById("4:5").style.backgroundColor = "white"
+  document.getElementById("4:3").style.backgroundColor = "black"
+  moves++
+}
+else if (x == '4:1' && document.getElementById("4:1").style.backgroundColor == "black" && document.getElementById("4:2").style.backgroundColor == "white")
+{
+  document.getElementById("4:0").style.backgroundColor = "white"
+  document.getElementById("4:2").style.backgroundColor = "black"
+  moves++
+}
+else if (x == '4:2' && document.getElementById("4:2").style.backgroundColor == "black" && document.getElementById("4:3").style.backgroundColor == "white")
+{
+  document.getElementById("4:1").style.backgroundColor = "white"
+  document.getElementById("4:3").style.backgroundColor = "black"
+  moves++
+}
+else if (x == '4:3' && document.getElementById("4:3").style.backgroundColor == "black" && document.getElementById("4:4").style.backgroundColor == "white")
+{
+  document.getElementById("4:2").style.backgroundColor = "white"
+  document.getElementById("4:4").style.backgroundColor = "black"
+  moves++
+}
+else if (x == '4:4' && document.getElementById("4:4").style.backgroundColor == "black" && document.getElementById("4:5").style.backgroundColor == "white")
+{
+  document.getElementById("4:3").style.backgroundColor = "white"
+  document.getElementById("4:5").style.backgroundColor = "black"
+  moves++
+}
+//The orange vehicles movement for level 4
+else if (x == '1:1' && document.getElementById("1:1").style.backgroundColor == "orange" && document.getElementById("1:0").style.backgroundColor == "white")
+{
+  document.getElementById("1:2").style.backgroundColor = "white"
+  document.getElementById("1:0").style.backgroundColor = "orange"
+  moves++
+}
+else if (x == '1:2' && document.getElementById("1:2").style.backgroundColor == "orange" && document.getElementById("1:1").style.backgroundColor == "white")
+{
+  document.getElementById("1:3").style.backgroundColor = "white"
+  document.getElementById("1:1").style.backgroundColor = "orange"
+  moves++
+}
+else if (x == '1:3' && document.getElementById("1:3").style.backgroundColor == "orange" && document.getElementById("1:2").style.backgroundColor == "white")
+{
+  document.getElementById("1:4").style.backgroundColor = "white"
+  document.getElementById("1:2").style.backgroundColor = "orange"
+  moves++
+}
+else if (x == '1:4' && document.getElementById("1:4").style.backgroundColor == "orange" && document.getElementById("1:3").style.backgroundColor == "white")
+{
+  document.getElementById("1:5").style.backgroundColor = "white"
+  document.getElementById("1:3").style.backgroundColor = "orange"
+  moves++
+}
+else if (x == '1:1' && document.getElementById("1:1").style.backgroundColor == "orange" && document.getElementById("1:2").style.backgroundColor == "white")
+{
+  document.getElementById("1:0").style.backgroundColor = "white"
+  document.getElementById("1:2").style.backgroundColor = "orange"
+  moves++
+}
+else if (x == '1:2' && document.getElementById("1:2").style.backgroundColor == "orange" && document.getElementById("1:3").style.backgroundColor == "white")
+{
+  document.getElementById("1:1").style.backgroundColor = "white"
+  document.getElementById("1:3").style.backgroundColor = "orange"
+  moves++
+}
+else if (x == '1:3' && document.getElementById("1:3").style.backgroundColor == "orange" && document.getElementById("1:4").style.backgroundColor == "white")
+{
+  document.getElementById("1:2").style.backgroundColor = "white"
+  document.getElementById("1:4").style.backgroundColor = "orange"
+  moves++
+}
+else if (x == '1:4' && document.getElementById("1:4").style.backgroundColor == "orange" && document.getElementById("1:5").style.backgroundColor == "white")
+{
+  document.getElementById("1:3").style.backgroundColor = "white"
+  document.getElementById("1:5").style.backgroundColor = "orange"
+  moves++
+}
+//The pink vehicles movement for level 4
+else if (x == '3:1' && document.getElementById("3:1").style.backgroundColor == "pink" && document.getElementById("2:1").style.backgroundColor == "white")
+{
+  document.getElementById("5:1").style.backgroundColor = "white"
+  document.getElementById("2:1").style.backgroundColor = "pink"
+  moves++
+}
+else if (x == '2:1' && document.getElementById("2:1").style.backgroundColor == "pink" && document.getElementById("1:1").style.backgroundColor == "white")
+{
+  document.getElementById("4:1").style.backgroundColor = "white"
+  document.getElementById("1:1").style.backgroundColor = "pink"
+  moves++
+}
+else if (x == '1:1' && document.getElementById("1:1").style.backgroundColor == "pink" && document.getElementById("0:1").style.backgroundColor == "white")
+{
+  document.getElementById("3:1").style.backgroundColor = "white"
+  document.getElementById("0:1").style.backgroundColor = "pink"
+  moves++
+}
+else if (x == '2:1' && document.getElementById("2:1").style.backgroundColor == "pink" && document.getElementById("3:1").style.backgroundColor == "white")
+{
+  document.getElementById("0:1").style.backgroundColor = "white"
+  document.getElementById("3:1").style.backgroundColor = "pink"
+  moves++
+}
+else if (x == '3:1' && document.getElementById("3:1").style.backgroundColor == "pink" && document.getElementById("4:1").style.backgroundColor == "white")
+{
+  document.getElementById("1:1").style.backgroundColor = "white"
+  document.getElementById("4:1").style.backgroundColor = "pink"
+  moves++
+}
+else if (x == '4:1' && document.getElementById("4:1").style.backgroundColor == "pink" && document.getElementById("5:1").style.backgroundColor == "white")
+{
+  document.getElementById("2:1").style.backgroundColor = "white"
+  document.getElementById("5:1").style.backgroundColor = "pink"
+  moves++
+}
+};
+
+function move5(x) //all of the vehicle movement for level 5
+{ document.getElementById("moves").innerHTML = "Moves: " + moves;
+//The orange vehicles movement for level 5
+if (x == '3:0' && document.getElementById("3:0").style.backgroundColor == "orange" && document.getElementById("4:0").style.backgroundColor == "white")
+{
+  document.getElementById("0:0").style.backgroundColor = "white"
+  document.getElementById("4:0").style.backgroundColor = "orange"
+  moves++
+}
+else if (x == '4:0' && document.getElementById("4:0").style.backgroundColor == "orange" && document.getElementById("5:0").style.backgroundColor == "white")
+{
+  document.getElementById("1:0").style.backgroundColor = "white"
+  document.getElementById("5:0").style.backgroundColor = "orange"
+  moves++
+}
+else if (x == '5:0' && document.getElementById("5:0").style.backgroundColor == "orange" && document.getElementById("6:0").style.backgroundColor == "white")
+{
+  document.getElementById("2:0").style.backgroundColor = "white"
+  document.getElementById("6:0").style.backgroundColor = "orange"
+  moves++
+} 
+else if (x == '3:0' && document.getElementById("3:0").style.backgroundColor == "orange" && document.getElementById("2:0").style.backgroundColor == "white")
+{
+  document.getElementById("6:0").style.backgroundColor = "white"
+  document.getElementById("2:0").style.backgroundColor = "orange"
+  moves++
+} 
+else if (x == '2:0' && document.getElementById("2:0").style.backgroundColor == "orange" && document.getElementById("1:0").style.backgroundColor == "white")
+{
+  document.getElementById("5:0").style.backgroundColor = "white"
+  document.getElementById("1:0").style.backgroundColor = "orange"
+  moves++
+} 
+else if (x == '1:0' && document.getElementById("1:0").style.backgroundColor == "orange" && document.getElementById("0:0").style.backgroundColor == "white")
+{
+  document.getElementById("4:0").style.backgroundColor = "white"
+  document.getElementById("0:0").style.backgroundColor = "orange"
+  moves++
+} 
+ //The yellow vehicles movement for level 5
+else if (x == '3:1' && document.getElementById("3:1").style.backgroundColor == "yellow" && document.getElementById("4:1").style.backgroundColor == "white")
+{
+  document.getElementById("0:1").style.backgroundColor = "white"
+  document.getElementById("4:1").style.backgroundColor = "yellow"
+  moves++
+}
+else if (x == '4:1' && document.getElementById("4:1").style.backgroundColor == "yellow" && document.getElementById("5:1").style.backgroundColor == "white")
+{
+  document.getElementById("1:1").style.backgroundColor = "white"
+  document.getElementById("5:1").style.backgroundColor = "yellow"
+  moves++
+}
+else if (x == '5:1' && document.getElementById("5:1").style.backgroundColor == "yellow" && document.getElementById("6:1").style.backgroundColor == "white")
+{
+  document.getElementById("2:1").style.backgroundColor = "white"
+  document.getElementById("6:1").style.backgroundColor = "yellow"
+  moves++
+} 
+else if (x == '3:1' && document.getElementById("3:1").style.backgroundColor == "yellow" && document.getElementById("2:1").style.backgroundColor == "white")
+{
+  document.getElementById("6:1").style.backgroundColor = "white"
+  document.getElementById("2:1").style.backgroundColor = "yellow"
+  moves++
+} 
+else if (x == '2:1' && document.getElementById("2:1").style.backgroundColor == "yellow" && document.getElementById("1:1").style.backgroundColor == "white")
+{
+  document.getElementById("5:1").style.backgroundColor = "white"
+  document.getElementById("1:1").style.backgroundColor = "yellow"
+  moves++
+} 
+else if (x == '1:1' && document.getElementById("1:1").style.backgroundColor == "yellow" && document.getElementById("0:1").style.backgroundColor == "white")
+{
+  document.getElementById("4:1").style.backgroundColor = "white"
+  document.getElementById("0:1").style.backgroundColor = "yellow"
+  moves++
+} 
+ //The aqua vehicles movement for level 5
+else if (x == '3:2' && document.getElementById("3:2").style.backgroundColor == "aqua" && document.getElementById("2:2").style.backgroundColor == "white")
+{
+  document.getElementById("5:2").style.backgroundColor = "white"
+  document.getElementById("2:2").style.backgroundColor = "aqua"
+  moves++
+}
+else if (x == '2:2' && document.getElementById("2:2").style.backgroundColor == "aqua" && document.getElementById("1:2").style.backgroundColor == "white")
+{
+  document.getElementById("4:2").style.backgroundColor = "white"
+  document.getElementById("1:2").style.backgroundColor = "aqua"
+  moves++
+}
+else if (x == '1:2' && document.getElementById("1:2").style.backgroundColor == "aqua" && document.getElementById("0:2").style.backgroundColor == "white")
+{
+  document.getElementById("3:2").style.backgroundColor = "white"
+  document.getElementById("0:2").style.backgroundColor = "aqua"
+  moves++
+}
+else if (x == '2:2' && document.getElementById("2:2").style.backgroundColor == "aqua" && document.getElementById("3:2").style.backgroundColor == "white")
+{
+  document.getElementById("0:2").style.backgroundColor = "white"
+  document.getElementById("3:2").style.backgroundColor = "aqua"
+  moves++
+}
+else if (x == '3:2' && document.getElementById("3:2").style.backgroundColor == "aqua" && document.getElementById("4:2").style.backgroundColor == "white")
+{
+  document.getElementById("1:2").style.backgroundColor = "white"
+  document.getElementById("4:2").style.backgroundColor = "aqua"
+  moves++
+}
+else if (x == '4:2' && document.getElementById("4:2").style.backgroundColor == "aqua" && document.getElementById("5:2").style.backgroundColor == "white")
+{
+  document.getElementById("2:2").style.backgroundColor = "white"
+  document.getElementById("5:2").style.backgroundColor = "aqua"
+  moves++
+}
+else if (x == '5:2' && document.getElementById("5:2").style.backgroundColor == "aqua" && document.getElementById("6:2").style.backgroundColor == "white")
+{
+  document.getElementById("3:2").style.backgroundColor = "white"
+  document.getElementById("6:2").style.backgroundColor = "aqua"
+  moves++
+}
+else if (x == '4:2' && document.getElementById("4:2").style.backgroundColor == "aqua" && document.getElementById("3:2").style.backgroundColor == "white")
+{
+  document.getElementById("6:2").style.backgroundColor = "white"
+  document.getElementById("3:2").style.backgroundColor = "aqua"
+  moves++
+}
+  //The black vehicles movement for level 5
+else if (x == '0:1' && document.getElementById("0:1").style.backgroundColor == "black" && document.getElementById("0:0").style.backgroundColor == "white")
+{
+  document.getElementById("0:2").style.backgroundColor = "white"
+  document.getElementById("0:0").style.backgroundColor = "black"
+  moves++
+}
+else if (x == '0:2' && document.getElementById("0:2").style.backgroundColor == "black" && document.getElementById("0:1").style.backgroundColor == "white")
+{
+  document.getElementById("0:3").style.backgroundColor = "white"
+  document.getElementById("0:1").style.backgroundColor = "black"
+  moves++
+}
+else if (x == '0:3' && document.getElementById("0:3").style.backgroundColor == "black" && document.getElementById("0:2").style.backgroundColor == "white")
+{
+  document.getElementById("0:4").style.backgroundColor = "white"
+  document.getElementById("0:2").style.backgroundColor = "black"
+  moves++
+}
+else if (x == '0:4' && document.getElementById("0:4").style.backgroundColor == "black" && document.getElementById("0:3").style.backgroundColor == "white")
+{
+  document.getElementById("0:5").style.backgroundColor = "white"
+  document.getElementById("0:3").style.backgroundColor = "black"
+  moves++
+}
+else if (x == '0:1' && document.getElementById("0:1").style.backgroundColor == "black" && document.getElementById("0:2").style.backgroundColor == "white")
+{
+  document.getElementById("0:0").style.backgroundColor = "white"
+  document.getElementById("0:2").style.backgroundColor = "black"
+  moves++
+}
+else if (x == '0:2' && document.getElementById("0:2").style.backgroundColor == "black" && document.getElementById("0:3").style.backgroundColor == "white")
+{
+  document.getElementById("0:1").style.backgroundColor = "white"
+  document.getElementById("0:3").style.backgroundColor = "black"
+  moves++
+}
+else if (x == '0:3' && document.getElementById("0:3").style.backgroundColor == "black" && document.getElementById("0:4").style.backgroundColor == "white")
+{
+  document.getElementById("0:2").style.backgroundColor = "white"
+  document.getElementById("0:4").style.backgroundColor = "black"
+  moves++
+}
+else if (x == '0:4' && document.getElementById("0:4").style.backgroundColor == "black" && document.getElementById("0:3").style.backgroundColor == "white")
+{
+  document.getElementById("0:5").style.backgroundColor = "white"
+  document.getElementById("0:3").style.backgroundColor = "black"
+  moves++
+}
+else if (x == '0:4' && document.getElementById("0:4").style.backgroundColor == "black" && document.getElementById("0:5").style.backgroundColor == "white")
+{
+  document.getElementById("0:3").style.backgroundColor = "white"
+  document.getElementById("0:5").style.backgroundColor = "black"
+  moves++
+}  
+  //The lime vehicles movement for level 5
+else if (x == '1:1' && document.getElementById("1:1").style.backgroundColor == "lime" && document.getElementById("1:0").style.backgroundColor == "white")
+{
+  document.getElementById("1:2").style.backgroundColor = "white"
+  document.getElementById("1:0").style.backgroundColor = "lime"
+  moves++
+}
+else if (x == '1:2' && document.getElementById("1:2").style.backgroundColor == "lime" && document.getElementById("1:1").style.backgroundColor == "white")
+{
+  document.getElementById("1:3").style.backgroundColor = "white"
+  document.getElementById("1:1").style.backgroundColor = "lime"
+  moves++
+}
+else if (x == '1:3' && document.getElementById("1:3").style.backgroundColor == "lime" && document.getElementById("1:2").style.backgroundColor == "white")
+{
+  document.getElementById("1:4").style.backgroundColor = "white"
+  document.getElementById("1:2").style.backgroundColor = "lime"
+  moves++
+}
+else if (x == '1:4' && document.getElementById("1:4").style.backgroundColor == "lime" && document.getElementById("1:3").style.backgroundColor == "white")
+{
+  document.getElementById("1:5").style.backgroundColor = "white"
+  document.getElementById("1:3").style.backgroundColor = "lime"
+  moves++
+}
+else if (x == '1:1' && document.getElementById("1:1").style.backgroundColor == "lime" && document.getElementById("1:2").style.backgroundColor == "white")
+{
+  document.getElementById("1:0").style.backgroundColor = "white"
+  document.getElementById("1:2").style.backgroundColor = "lime"
+  moves++
+}
+else if (x == '1:2' && document.getElementById("1:2").style.backgroundColor == "lime" && document.getElementById("1:3").style.backgroundColor == "white")
+{
+  document.getElementById("1:1").style.backgroundColor = "white"
+  document.getElementById("1:3").style.backgroundColor = "lime"
+  moves++
+}
+else if (x == '1:3' && document.getElementById("1:3").style.backgroundColor == "lime" && document.getElementById("1:4").style.backgroundColor == "white")
+{
+  document.getElementById("1:2").style.backgroundColor = "white"
+  document.getElementById("1:4").style.backgroundColor = "lime"
+  moves++
+}
+else if (x == '1:4' && document.getElementById("1:4").style.backgroundColor == "lime" && document.getElementById("1:3").style.backgroundColor == "white")
+{
+  document.getElementById("1:5").style.backgroundColor = "white"
+  document.getElementById("1:3").style.backgroundColor = "lime"
+  moves++
+}
+else if (x == '1:4' && document.getElementById("1:4").style.backgroundColor == "lime" && document.getElementById("1:5").style.backgroundColor == "white")
+{
+  document.getElementById("1:3").style.backgroundColor = "white"
+  document.getElementById("1:5").style.backgroundColor = "lime"
+  moves++
+}  
+  //The pink vehicles movement for level 5
+else if (x == '3:1' && document.getElementById("3:1").style.backgroundColor == "pink" && document.getElementById("3:0").style.backgroundColor == "white")
+{
+  document.getElementById("3:2").style.backgroundColor = "white"
+  document.getElementById("3:0").style.backgroundColor = "pink"
+  moves++
+}
+else if (x == '3:2' && document.getElementById("3:2").style.backgroundColor == "pink" && document.getElementById("3:1").style.backgroundColor == "white")
+{
+  document.getElementById("3:3").style.backgroundColor = "white"
+  document.getElementById("3:1").style.backgroundColor = "pink"
+  moves++
+}
+else if (x == '3:3' && document.getElementById("3:3").style.backgroundColor == "pink" && document.getElementById("3:2").style.backgroundColor == "white")
+{
+  document.getElementById("3:4").style.backgroundColor = "white"
+  document.getElementById("3:2").style.backgroundColor = "pink"
+  moves++
+}
+else if (x == '3:4' && document.getElementById("3:4").style.backgroundColor == "pink" && document.getElementById("3:3").style.backgroundColor == "white")
+{
+  document.getElementById("3:5").style.backgroundColor = "white"
+  document.getElementById("3:3").style.backgroundColor = "pink"
+  moves++
+}
+else if (x == '3:1' && document.getElementById("3:1").style.backgroundColor == "pink" && document.getElementById("3:2").style.backgroundColor == "white")
+{
+  document.getElementById("3:0").style.backgroundColor = "white"
+  document.getElementById("3:2").style.backgroundColor = "pink"
+  moves++
+}
+else if (x == '3:2' && document.getElementById("3:2").style.backgroundColor == "pink" && document.getElementById("3:3").style.backgroundColor == "white")
+{
+  document.getElementById("3:1").style.backgroundColor = "white"
+  document.getElementById("3:3").style.backgroundColor = "pink"
+  moves++
+}
+else if (x == '3:3' && document.getElementById("3:3").style.backgroundColor == "pink" && document.getElementById("3:4").style.backgroundColor == "white")
+{
+  document.getElementById("3:2").style.backgroundColor = "white"
+  document.getElementById("3:4").style.backgroundColor = "pink"
+  moves++
+}
+else if (x == '3:4' && document.getElementById("3:4").style.backgroundColor == "pink" && document.getElementById("3:3").style.backgroundColor == "white")
+{
+  document.getElementById("3:5").style.backgroundColor = "white"
+  document.getElementById("3:3").style.backgroundColor = "pink"
+  moves++
+}
+else if (x == '3:4' && document.getElementById("3:4").style.backgroundColor == "pink" && document.getElementById("3:5").style.backgroundColor == "white")
+{
+  document.getElementById("3:3").style.backgroundColor = "white"
+  document.getElementById("3:5").style.backgroundColor = "pink"
+  moves++
+}    
+  //The blue vehicles movement for level 5
+else if (x == '5:3' && document.getElementById("5:3").style.backgroundColor == "blue" && document.getElementById("5:2").style.backgroundColor == "white")
+{
+  document.getElementById("5:5").style.backgroundColor = "white"
+  document.getElementById("5:2").style.backgroundColor = "blue"
+  moves++
+}
+else if (x == '5:2' && document.getElementById("5:2").style.backgroundColor == "blue" && document.getElementById("5:1").style.backgroundColor == "white")
+{
+  document.getElementById("5:4").style.backgroundColor = "white"
+  document.getElementById("5:1").style.backgroundColor = "blue"
+  moves++
+}
+else if (x == '5:1' && document.getElementById("5:1").style.backgroundColor == "blue" && document.getElementById("5:0").style.backgroundColor == "white")
+{
+  document.getElementById("5:3").style.backgroundColor = "white"
+  document.getElementById("5:0").style.backgroundColor = "blue"
+  moves++
+}
+else if (x == '5:2' && document.getElementById("5:2").style.backgroundColor == "blue" && document.getElementById("5:3").style.backgroundColor == "white")
+{
+  document.getElementById("5:0").style.backgroundColor = "white"
+  document.getElementById("5:3").style.backgroundColor = "blue"
+  moves++
+}
+else if (x == '5:3' && document.getElementById("5:3").style.backgroundColor == "blue" && document.getElementById("5:4").style.backgroundColor == "white")
+{
+  document.getElementById("5:1").style.backgroundColor = "white"
+  document.getElementById("5:4").style.backgroundColor = "blue"
+  moves++
+}
+else if (x == '5:4' && document.getElementById("5:4").style.backgroundColor == "blue" && document.getElementById("5:5").style.backgroundColor == "white")
+{
+  document.getElementById("5:2").style.backgroundColor = "white"
+  document.getElementById("5:5").style.backgroundColor = "blue"
+  moves++
+}  
+  //The green vehicles movement for level 5
+else if (x == '6:3' && document.getElementById("6:3").style.backgroundColor == "green" && document.getElementById("6:2").style.backgroundColor == "white")
+{
+  document.getElementById("6:5").style.backgroundColor = "white"
+  document.getElementById("6:2").style.backgroundColor = "green"
+  moves++
+}
+else if (x == '6:2' && document.getElementById("6:2").style.backgroundColor == "green" && document.getElementById("6:1").style.backgroundColor == "white")
+{
+  document.getElementById("6:4").style.backgroundColor = "white"
+  document.getElementById("6:1").style.backgroundColor = "green"
+  moves++
+}
+else if (x == '6:1' && document.getElementById("6:1").style.backgroundColor == "green" && document.getElementById("6:0").style.backgroundColor == "white")
+{
+  document.getElementById("6:3").style.backgroundColor = "white"
+  document.getElementById("6:0").style.backgroundColor = "green"
+  moves++
+}
+else if (x == '6:2' && document.getElementById("6:2").style.backgroundColor == "green" && document.getElementById("6:3").style.backgroundColor == "white")
+{
+  document.getElementById("6:0").style.backgroundColor = "white"
+  document.getElementById("6:3").style.backgroundColor = "green"
+  moves++
+}
+else if (x == '6:3' && document.getElementById("6:3").style.backgroundColor == "green" && document.getElementById("6:4").style.backgroundColor == "white")
+{
+  document.getElementById("6:1").style.backgroundColor = "white"
+  document.getElementById("6:4").style.backgroundColor = "green"
+  moves++
+}
+else if (x == '6:4' && document.getElementById("6:4").style.backgroundColor == "green" && document.getElementById("6:5").style.backgroundColor == "white")
+{
+  document.getElementById("6:2").style.backgroundColor = "white"
+  document.getElementById("6:5").style.backgroundColor = "green"
+  moves++
+}  
+  //The purple vehicles movement for level 5
+else if (x == '3:4' && document.getElementById("3:4").style.backgroundColor == "purple" && document.getElementById("2:4").style.backgroundColor == "white")
+{
+  document.getElementById("5:4").style.backgroundColor = "white"
+  document.getElementById("2:4").style.backgroundColor = "purple"
+  moves++
+}
+else if (x == '2:4' && document.getElementById("2:4").style.backgroundColor == "purple" && document.getElementById("1:4").style.backgroundColor == "white")
+{
+  document.getElementById("4:4").style.backgroundColor = "white"
+  document.getElementById("1:4").style.backgroundColor = "purple"
+  moves++
+}
+else if (x == '1:4' && document.getElementById("1:4").style.backgroundColor == "purple" && document.getElementById("0:4").style.backgroundColor == "white")
+{
+  document.getElementById("3:4").style.backgroundColor = "white"
+  document.getElementById("0:4").style.backgroundColor = "purple"
+  moves++
+}
+else if (x == '2:4' && document.getElementById("2:4").style.backgroundColor == "purple" && document.getElementById("3:4").style.backgroundColor == "white")
+{
+  document.getElementById("0:4").style.backgroundColor = "white"
+  document.getElementById("3:4").style.backgroundColor = "purple"
+  moves++
+}
+else if (x == '3:4' && document.getElementById("3:4").style.backgroundColor == "purple" && document.getElementById("4:4").style.backgroundColor == "white")
+{
+  document.getElementById("1:4").style.backgroundColor = "white"
+  document.getElementById("4:4").style.backgroundColor = "purple"
+  moves++
+}
+else if (x == '4:4' && document.getElementById("4:4").style.backgroundColor == "purple" && document.getElementById("5:4").style.backgroundColor == "white")
+{
+  document.getElementById("2:4").style.backgroundColor = "white"
+  document.getElementById("5:4").style.backgroundColor = "purple"
+  moves++
+}
+else if (x == '5:4' && document.getElementById("5:4").style.backgroundColor == "purple" && document.getElementById("6:4").style.backgroundColor == "white")
+{
+  document.getElementById("3:4").style.backgroundColor = "white"
+  document.getElementById("6:4").style.backgroundColor = "purple"
+  moves++
+}
+else if (x == '4:4' && document.getElementById("4:4").style.backgroundColor == "purple" && document.getElementById("3:4").style.backgroundColor == "white")
+{
+  document.getElementById("6:4").style.backgroundColor = "white"
+  document.getElementById("3:4").style.backgroundColor = "purple"
+  moves++
+}
+  //The magenta vehicles movement for level 5
+else if (x == '3:5' && document.getElementById("3:5").style.backgroundColor == "magenta" && document.getElementById("2:5").style.backgroundColor == "white")
+{
+  document.getElementById("5:5").style.backgroundColor = "white"
+  document.getElementById("2:5").style.backgroundColor = "magenta"
+  moves++
+}
+else if (x == '2:5' && document.getElementById("2:5").style.backgroundColor == "magenta" && document.getElementById("1:5").style.backgroundColor == "white")
+{
+  document.getElementById("4:5").style.backgroundColor = "white"
+  document.getElementById("1:5").style.backgroundColor = "magenta"
+  moves++
+}
+else if (x == '1:5' && document.getElementById("1:5").style.backgroundColor == "magenta" && document.getElementById("0:5").style.backgroundColor == "white")
+{
+  document.getElementById("3:5").style.backgroundColor = "white"
+  document.getElementById("0:5").style.backgroundColor = "magenta"
+  moves++
+}
+else if (x == '2:5' && document.getElementById("2:5").style.backgroundColor == "magenta" && document.getElementById("3:5").style.backgroundColor == "white")
+{
+  document.getElementById("0:5").style.backgroundColor = "white"
+  document.getElementById("3:5").style.backgroundColor = "magenta"
+  moves++
+}
+else if (x == '3:5' && document.getElementById("3:5").style.backgroundColor == "magenta" && document.getElementById("4:5").style.backgroundColor == "white")
+{
+  document.getElementById("1:5").style.backgroundColor = "white"
+  document.getElementById("4:5").style.backgroundColor = "magenta"
+  moves++
+}
+else if (x == '4:5' && document.getElementById("4:5").style.backgroundColor == "magenta" && document.getElementById("5:5").style.backgroundColor == "white")
+{
+  document.getElementById("2:5").style.backgroundColor = "white"
+  document.getElementById("5:5").style.backgroundColor = "magenta"
+  moves++
+}
+else if (x == '5:5' && document.getElementById("5:5").style.backgroundColor == "magenta" && document.getElementById("6:5").style.backgroundColor == "white")
+{
+  document.getElementById("3:5").style.backgroundColor = "white"
+  document.getElementById("6:5").style.backgroundColor = "magenta"
+  moves++
+}
+else if (x == '4:5' && document.getElementById("4:5").style.backgroundColor == "magenta" && document.getElementById("3:5").style.backgroundColor == "white")
+{
+  document.getElementById("6:5").style.backgroundColor = "white"
+  document.getElementById("3:5").style.backgroundColor = "magenta"
+  moves++
+}
+};
+
+
+document.addEventListener('keyup', (e) => //Red car movement with arrows
+{ document.getElementById("moves").innerHTML = "Moves: " + moves; 
+if (e.code === "ArrowLeft") 
+{
+if (document.getElementById("2:5").style.backgroundColor == "red" && document.getElementById("2:4").style.backgroundColor == "white")
+  {
+  document.getElementById("2:4").style.backgroundColor = "red"
+  document.getElementById("2:5").style.backgroundColor = "white"
+  moves++
+  }
+else if (document.getElementById("2:4").style.backgroundColor == "red" && document.getElementById("2:3").style.backgroundColor == "white")
+  {
+  document.getElementById("2:3").style.backgroundColor = "red"
+  document.getElementById("2:4").style.backgroundColor = "white"
+  moves++
+  }
+else if (document.getElementById("2:3").style.backgroundColor == "red" && document.getElementById("2:2").style.backgroundColor == "white")
+  {
+  document.getElementById("2:2").style.backgroundColor = "red"
+  document.getElementById("2:3").style.backgroundColor = "white"
+  moves++
+  }
+else if (document.getElementById("2:2").style.backgroundColor == "red" && document.getElementById("2:1").style.backgroundColor == "white")
+  {
+  document.getElementById("2:1").style.backgroundColor = "red"
+  document.getElementById("2:2").style.backgroundColor = "white"
+  moves++
+  }
+else if (document.getElementById("2:1").style.backgroundColor == "red" && document.getElementById("2:0").style.backgroundColor == "white")
+  {
+  
+  document.getElementById("2:0").style.backgroundColor = "red"
+  document.getElementById("2:1").style.backgroundColor = "white"
+  if (document.getElementById("2:0").value == "End?" && document.getElementById("2:0").style.backgroundColor == "red" && lvl==4)
+  {
+ document.getElementById("message").innerHTML = "You have escaped!"; //level four escape
+  document.getElementById("time").style.display = "hidden"
+  for (var c=0 ; c<7 ; c++)
+  {
+  document.getElementById("0:" + c).disabled = true;
+  document.getElementById("1:" + c).disabled = true;
+  document.getElementById("2:" + c).disabled = true;
+  document.getElementById("3:" + c).disabled = true;
+  document.getElementById("4:" + c).disabled = true;
+  document.getElementById("5:" + c).disabled = true;
+  document.getElementById("6:" + c).disabled = true;
+  };
+  if (lvl==1 && moves<highscore1)
+  {
+  highscore1=moves;
+    document.getElementById("hs").innerHTML = "Highscore: "+ (highscore1-1);
+  };
+    if (lvl==5 && moves<highscore5)
+  {
+  highscore5=moves;
+    document.getElementById("hs").innerHTML = "Highscore: "+ (highscore5-1);
+  };
+    if (lvl==2 && moves<highscore2)
+  {
+  highscore2=moves;
+    document.getElementById("hs").innerHTML = "Highscore: "+ (highscore2-1);
+  };
+    if (lvl==3 && moves<highscore3)
+  {
+  highscore3=moves;
+    document.getElementById("hs").innerHTML = "Highscore: "+ (highscore3-1);
+  };
+    if (lvl==4 && moves<highscore4)
+  {
+  highscore4=moves;
+    document.getElementById("hs").innerHTML = "Highscore: "+ (highscore4-1);
+  };
+  document.getElementById("2:0").style.backgroundColor = "white"
+
+  };
+  moves++
+  }
+ else if (document.getElementById("4:5").style.backgroundColor == "red" && document.getElementById("4:4").style.backgroundColor == "white")
+  {
+  document.getElementById("4:4").style.backgroundColor = "red"
+  document.getElementById("4:5").style.backgroundColor = "white"
+  moves++
+  }
+else if (document.getElementById("4:4").style.backgroundColor == "red" && document.getElementById("4:3").style.backgroundColor == "white")
+  {
+  document.getElementById("4:3").style.backgroundColor = "red"
+  document.getElementById("4:4").style.backgroundColor = "white"
+  moves++
+  }
+else if (document.getElementById("4:3").style.backgroundColor == "red" && document.getElementById("4:2").style.backgroundColor == "white")
+  {
+  document.getElementById("4:2").style.backgroundColor = "red"
+  document.getElementById("4:3").style.backgroundColor = "white"
+  moves++
+  }
+else if (document.getElementById("4:2").style.backgroundColor == "red" && document.getElementById("4:1").style.backgroundColor == "white")
+  {
+  document.getElementById("4:1").style.backgroundColor = "red"
+  document.getElementById("4:2").style.backgroundColor = "white"
+  moves++
+  }
+else if (document.getElementById("4:1").style.backgroundColor == "red" && document.getElementById("4:0").style.backgroundColor == "white")
+  {
+  document.getElementById("4:0").style.backgroundColor = "red"
+  document.getElementById("4:1").style.backgroundColor = "white"
+  moves++
+  }
+else {};
+}
+if (e.code === "ArrowRight")
+{
+    if (document.getElementById("2:0").style.backgroundColor == "red" && document.getElementById("2:1").style.backgroundColor == "white")
+  {
+  document.getElementById("2:1").style.backgroundColor = "red"
+  document.getElementById("2:0").style.backgroundColor = "white"
+  moves++
+  }
+      else if (document.getElementById("2:1").style.backgroundColor == "red" && document.getElementById("2:2").style.backgroundColor == "white")
+  {
+  document.getElementById("2:2").style.backgroundColor = "red"
+  document.getElementById("2:1").style.backgroundColor = "white"
+  moves++
+  }
+      else  if (document.getElementById("2:2").style.backgroundColor == "red" && document.getElementById("2:3").style.backgroundColor == "white")
+  {
+  document.getElementById("2:3").style.backgroundColor = "red"
+  document.getElementById("2:2").style.backgroundColor = "white"
+  moves++
+  }
+       else   if (document.getElementById("2:3").style.backgroundColor == "red" && document.getElementById("2:4").style.backgroundColor == "white")
+  {
+  document.getElementById("2:4").style.backgroundColor = "red"
+  document.getElementById("2:3").style.backgroundColor = "white"
+  moves++
+  }
+         else   if (document.getElementById("2:4").style.backgroundColor == "red" && document.getElementById("2:5").style.backgroundColor == "white")
+  {
+  document.getElementById("2:5").style.backgroundColor = "red"
+  document.getElementById("2:4").style.backgroundColor = "white"
+  moves++
+  }
+           else   if (document.getElementById("2:5").style.backgroundColor == "red" && document.getElementById("2:6").style.backgroundColor == "white")
+  {
+  document.getElementById("2:6").style.backgroundColor = "red"
+  document.getElementById("2:5").style.backgroundColor = "white"
+  moves++
+  if (lvl !=4) //All levels exept four escape sequence and setting highscore.
+  {
+    document.getElementById("message").innerHTML = "You have escaped!";
+  document.getElementById("time").style.display = "hidden"
+  for (var c=0 ; c<7 ; c++)
+  {
+  document.getElementById("0:" + c).disabled = true;
+  document.getElementById("1:" + c).disabled = true;
+  document.getElementById("2:" + c).disabled = true;
+  document.getElementById("3:" + c).disabled = true;
+  document.getElementById("4:" + c).disabled = true;
+  document.getElementById("5:" + c).disabled = true;
+  document.getElementById("6:" + c).disabled = true;
+  };
+  if (lvl==1 && moves<highscore1)
+  {
+  highscore1=moves;
+    document.getElementById("hs").innerHTML = "Highscore: "+ (highscore1-1);
+  };
+    if (lvl==5 && moves<highscore5)
+  {
+  highscore5=moves;
+    document.getElementById("hs").innerHTML = "Highscore: "+ (highscore5-1);
+  };
+    if (lvl==2 && moves<highscore2)
+  {
+  highscore2=moves;
+    document.getElementById("hs").innerHTML = "Highscore: "+ (highscore2-1);
+  };
+    if (lvl==3 && moves<highscore3)
+  {
+  highscore3=moves;
+    document.getElementById("hs").innerHTML = "Highscore: "+ (highscore3-1);
+  };
+    if (lvl==4 && moves<highscore4)
+  {
+  highscore4=moves;
+    document.getElementById("hs").innerHTML = "Highscore: "+ (highscore4-1);
+  };
+  }
+  if (lvl==4)
+  {
+  document.getElementById("2:0").value = "End?";
+  }
+  }
+  else if (document.getElementById("4:0").style.backgroundColor == "red" && document.getElementById("4:1").style.backgroundColor == "white")
+  {
+  document.getElementById("4:1").style.backgroundColor = "red"
+  document.getElementById("4:0").style.backgroundColor = "white"
+  moves++
+  }
+      else if (document.getElementById("4:1").style.backgroundColor == "red" && document.getElementById("4:2").style.backgroundColor == "white")
+  {
+  document.getElementById("4:2").style.backgroundColor = "red"
+  document.getElementById("4:1").style.backgroundColor = "white"
+  moves++
+  }
+      else  if (document.getElementById("4:2").style.backgroundColor == "red" && document.getElementById("4:3").style.backgroundColor == "white")
+  {
+  document.getElementById("4:3").style.backgroundColor = "red"
+  document.getElementById("4:2").style.backgroundColor = "white"
+  moves++
+  }
+       else   if (document.getElementById("4:3").style.backgroundColor == "red" && document.getElementById("4:4").style.backgroundColor == "white")
+  {
+  document.getElementById("4:4").style.backgroundColor = "red"
+  document.getElementById("4:3").style.backgroundColor = "white"
+  moves++
+  }
+         else   if (document.getElementById("4:4").style.backgroundColor == "red" && document.getElementById("4:5").style.backgroundColor == "white")
+  {
+  document.getElementById("4:5").style.backgroundColor = "red"
+  document.getElementById("4:4").style.backgroundColor = "white"
+  moves++
+  }
+           else   if (document.getElementById("4:5").style.backgroundColor == "red" && document.getElementById("2:0").style.backgroundColor == "white")
+  {
+  document.getElementById("2:0").style.backgroundColor = "red"
+  document.getElementById("4:5").style.backgroundColor = "white"
+  moves++
+  }
+  else{};
+  }
+  });
+
+function move(x) //Function to sort the movement to the corresponding function for the current level
+{
+if (lvl==1) { move1(x) };
+if (lvl==2) {move2(x)};
+if (lvl==3) {move3(x)};
+if (lvl==4) {move4(x)};
+if (lvl==5) {move5(x)};
+} 
+
+</script>
+
+<html>
+<head>
+<link href="final.css" type="text/css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Bangers|Gelasio&display=swap" rel="stylesheet">
+<h1> Traffic Jam! </h1>
+</head>
+<body onload="one()">
+<div id = "all"> <div id="intro">
+ The goal of the game is for you to reach the end in the smallest amount of moves possible. <br>
+<b>How to play?</b>  You are controlling the <u>red car</u>, and making it move, you need to click the <b>right and left arrow keys</b>. <br>To make the other vehicles move out of your way in order to escape, just click on them in the direction that you would like them to move. <br> For example, on the first level, if you wanted the green car to move to the left, you would click on its green square, which is the most in the left direction.
+</div>
+<div id="table"> <! –– The table of which the vehicles will be on, setting boundries for them aswell. ––>
+<br>
+<table>
+<tr>
+<td> <input type=button class=buttons id="0:0" onclick="move('0:0')" button style="background-color:white">   </td>
+<td> <input type=button class=buttons id="0:1" onclick="move('0:1')" button style="background-color:white">   </td>
+<td> <input type=button class=buttons id="0:2" onclick="move('0:2')" button style="background-color:white">   </td>
+<td> <input type=button class=buttons id="0:3" onclick="move('0:3')" button style="background-color:white">   </td>
+<td> <input type=button class=buttons id="0:4" onclick="move('0:4')" button style="background-color:white">   </td>
+<td> <input type=button class=buttons id="0:5" onclick="move('0:5')" button style="background-color:white">   </td>
+<td> <input type=button class=buttons id="0:6" style="display:none" onclick="move('0:6')" button style="background-color:white">   </td>
+</tr>
+<tr>
+<td> <input type=button class=buttons id="1:0" onclick="move('1:0')" button style="background-color:white">   </td>
+<td> <input type=button class=buttons id="1:1" onclick="move('1:1')" button style="background-color:white">   </td>
+<td> <input type=button class=buttons id="1:2" onclick="move('1:2')" button style="background-color:white">   </td>
+<td> <input type=button class=buttons id="1:3" onclick="move('1:3')" button style="background-color:white">   </td>
+<td> <input type=button class=buttons id="1:4" onclick="move('1:4')" button style="background-color:white">   </td>
+<td> <input type=button class=buttons id="1:5" onclick="move('1:5')" button style="background-color:white">   </td>
+<td> <input type=button class=buttons id="1:6" style="display:none" onclick="move('1:6')" button style="background-color:white">   </td>
+</tr>
+<tr>
+<td> <input type=button class=buttons id="2:0" onclick="move('2:0')" button style="background-color:white">   </td>
+<td> <input type=button class=buttons id="2:1" onclick="move('2:1')" button style="background-color:white">   </td>
+<td> <input type=button class=buttons id="2:2" onclick="move('2:2')" button style="background-color:white">   </td>
+<td> <input type=button class=buttons id="2:3" onclick="move('2:3')" button style="background-color:white">   </td>
+<td> <input type=button class=buttons id="2:4" onclick="move('2:4')" button style="background-color:white">   </td>
+<td> <input type=button class=buttons id="2:5" onclick="move('2:5')" button style="background-color:white">   </td>
+<td> <input type=button class=buttons id="2:6" value="End" button style="background-color:white">   </td>
+</tr>
+<tr>
+<td> <input type=button class=buttons id="3:0" onclick="move('3:0')" button style="background-color:white">   </td>
+<td> <input type=button class=buttons id="3:1" onclick="move('3:1')" button style="background-color:white">   </td>
+<td> <input type=button class=buttons id="3:2" onclick="move('3:2')" button style="background-color:white">   </td>
+<td> <input type=button class=buttons id="3:3" onclick="move('3:3')" button style="background-color:white">   </td>
+<td> <input type=button class=buttons id="3:4" onclick="move('3:4')" button style="background-color:white">   </td>
+<td> <input type=button class=buttons id="3:5" onclick="move('3:5')" button style="background-color:white">   </td>
+<td> <input type=button class=buttons id="3:6" style="display:none" onclick="move('3:6')" button style="background-color:white">   </td>
+</tr>
+<tr>
+<td> <input type=button class=buttons id="4:0" onclick="move('4:0')" button style="background-color:white">   </td>
+<td> <input type=button class=buttons id="4:1" onclick="move('4:1')" button style="background-color:white">   </td>
+<td> <input type=button class=buttons id="4:2" onclick="move('4:2')" button style="background-color:white">   </td>
+<td> <input type=button class=buttons id="4:3" onclick="move('4:3')" button style="background-color:white">   </td>
+<td> <input type=button class=buttons id="4:4" onclick="move('4:4')" button style="background-color:white">   </td>
+<td> <input type=button class=buttons id="4:5" onclick="move('4:5')" button style="background-color:white">   </td>
+<td id = "five"> <input type=button class=buttons id="4:6" value="Teleport" onclick="move('4:6')" button style="background-color:white">   </td>
+</tr>
+<tr>
+<td> <input type=button class=buttons id="5:0" onclick="move('5:0')" button style="background-color:white">   </td>
+<td> <input type=button class=buttons id="5:1" onclick="move('5:1')" button style="background-color:white">   </td>
+<td> <input type=button class=buttons id="5:2" onclick="move('5:2')" button style="background-color:white">   </td>
+<td> <input type=button class=buttons id="5:3" onclick="move('5:3')" button style="background-color:white">   </td>
+<td> <input type=button class=buttons id="5:4" onclick="move('5:4')" button style="background-color:white">   </td>
+<td> <input type=button class=buttons id="5:5" onclick="move('5:5')" button style="background-color:white">   </td>
+<td> <input type=button class=buttons id="5:6" style="display:none" onclick="move('5:6')" button style="background-color:white">   </td>
+</tr>
+<tr style="display:none" id="6th">
+<td> <input type=button class=buttons id="6:0" onclick="move('6:0')" button style="background-color:white">   </td>
+<td> <input type=button class=buttons id="6:1" onclick="move('6:1')" button style="background-color:white">   </td>
+<td> <input type=button class=buttons id="6:2" onclick="move('6:2')" button style="background-color:white">   </td>
+<td> <input type=button class=buttons id="6:3" onclick="move('6:3')" button style="background-color:white">   </td>
+<td> <input type=button class=buttons id="6:4" onclick="move('6:4')" button style="background-color:white">   </td>
+<td> <input type=button class=buttons id="6:5" onclick="move('6:5')" button style="background-color:white">   </td>
+<td> <input type=button class=buttons id="6:6" onclick="move('6:6')" button style="background-color:white">   </td>
+</tr>
+</table> <br>
+</div>
+<div id="stats"> <! –– All the stats and the win message are below the table in the stats division. ––>
+<div id="levels"> Levels: <! –– A level selector for the player to choose thier preferred level ––>
+ <input value="1" type=button class=levels id="5:0" onclick="one()" button style="background-color:white">
+<input value="2" type=button class=levels id="5:1" onclick="two()" button style="background-color:white">   
+<input value="3" type=button class=levels id="5:2" onclick="three()" button style="background-color:white"> 
+<input value="4" type=button class=levels id="5:3" onclick="four()" button style="background-color:white">   
+<input value="5" type=button class=levels id="5:4" onclick="five()" button style="background-color:white">  
+ <input value="Random" type=button class=levels id="5:5" onclick="random()" button style="background-color:white">  
+
+</div>
+<div id="moves">
+Moves:0
+</div>
+<div id="hs">
+Highscore: None
+</div>
+<div id="timer">
+Time: <span id="time"> </span>
+</div>
+<div id="message">
+
+</div>
+</div>
+
+</div>
+</body>
+</html>
+
+
